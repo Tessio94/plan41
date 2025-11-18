@@ -10,26 +10,26 @@ import {
 
 const Footer = () => {
 	return (
-		<footer className="flex flex-col lg:flex-row justify-between items-center px-8 lg:px-12 xl:px-30 py-10 bg-linear-to-t from-theme3/50 from-0% via-theme3/50 via-80% to-theme1/10 to-100%">
+		<footer className="flex flex-col lg:flex-row justify-between items-center px-8 lg:px-12 xl:px-30 py-10 bg-[url('/frame-1.png')] bg-cover bg-no-repeat">
 			<a href="#">
 				<Image
-					className=""
-					src="/logo.png"
-					alt="NLS Tech logo"
+					className="rounded-full"
+					src="/logo1.png"
+					alt="plan41 logo"
 					width={150}
 					height={150}
 				/>
 			</a>
 
-			<div className="order-1 text-center lg:order-0 font-inter text-text1">
+			<div className="order-1 text-center lg:order-0 font-inter text-slate-100">
 				Copyright © 2025 Plan41 - Sva prava pridržana.
 			</div>
 			<div className="flex flex-col gap-4">
-				<p className="text-2xl font-inter text-text1 flex flex-row items-start gap-4">
+				<p className="text-2xl font-inter text-slate-100 flex flex-row items-start gap-4">
 					<CiLocationOn className="text-3xl" />
 					Zadar, Augusta Cesarca 30A
 				</p>
-				<p className="text-2xl font-inter text-text1 flex flex-row items-start gap-4">
+				<p className="text-2xl font-inter text-slate-100 flex flex-row items-start gap-4">
 					<CiMail className="text-3xl" />
 
 					<a
@@ -39,7 +39,7 @@ const Footer = () => {
 						info@plan41.hr
 					</a>
 				</p>
-				<p className="text-2xl font-inter text-text1 flex flex-row items-start gap-4">
+				<p className="text-2xl font-inter text-slate-100 flex flex-row items-start gap-4">
 					<CiMobile3 className="text-3xl" />
 
 					<a

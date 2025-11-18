@@ -2,13 +2,13 @@
 
 import DecisionIcons from "@/components/icons/DecisionIcons";
 import { useState } from "react";
-import ClipPathIcons from "./icons/ClipPathIcons";
+import ClipPathIcons from "../icons/ClipPathIcons";
 
 export default function Steps() {
 	const [transitionStep, setTransitionStep] = useState("");
 
 	return (
-		<section className="bg-yellow-200/10 px-6 sm:px-10 lg:px-18  2xl:px-28 py-26">
+		<section className="bg-background px-6 sm:px-10 lg:px-18  2xl:px-28 py-26">
 			<ClipPathIcons />
 			<div className="mb-25">
 				<h3 className="relative text-4xl font-bold font-playfair mb-2 after:content-[''] after:absolute after:h-1 after:left-0  after:top-full after:bg-theme4 after:w-10">
@@ -20,7 +20,7 @@ export default function Steps() {
 				</p>
 			</div>
 
-			<div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-5 max-lg:place-items-center">
+			<div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-5 max-lg:place-items-center ">
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-y-18 lg:gap-x-18 max-lg:col-span-2 max-lg:place-items-center place-items-stretch  max-lg:w-full">
 					<div
 						className="relative w-full h-full max-w-80 max-h-80 z-20 group"
