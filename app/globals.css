@@ -138,7 +138,7 @@ body {
 	padding: 20px;
 }
 
-.intro-card::after,
+/* .intro-card::after,
 .intro-card::before {
 	box-sizing: initial;
 	content: "";
@@ -162,4 +162,20 @@ body {
 .intro-card::before {
 	filter: blur(1.5rem);
 	opacity: 0.5;
+} */
+
+@property --border-angle {
+	syntax: "<angle>";
+	inherits: false;
+	initial-value: 0deg;
+}
+
+@theme {
+	--animate-rotate-border: border-rotate 10s linear infinite;
+
+	@keyframes border-rotate {
+		to {
+			--border-angle: 360deg;
+		}
+	}
 }
