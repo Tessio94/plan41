@@ -59,7 +59,12 @@ const Cover = () => {
 				</div>
 				<div className="w-1/2">
 					<div className="relative w-fit ml-auto z-30">
-						<div className="relative  overflow-hidden card rounded-2xl  z-30">
+						<motion.div
+							initial={{ opacity: 0, x: 150 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 1, delay: 1.8 }}
+							className="relative  overflow-hidden cover-card rounded-2xl  z-30"
+						>
 							<Image
 								src="/financije2_50.jpg"
 								className="relative z-30"
@@ -67,8 +72,13 @@ const Cover = () => {
 								width={500}
 								height={563}
 							/>
-						</div>
-						<div className="absolute bg-linear-to-bl from-blue-800 to-transparent w-[400px] h-[450px] top-20 -left-20 z-10 rounded-2xl card" />
+						</motion.div>
+						<motion.div
+							initial={{ opacity: 0, x: 150 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 1, delay: 1 }}
+							className="absolute bg-linear-to-bl from-blue-800 to-transparent w-full h-full top-20 -left-20 z-10 rounded-2xl cover-card"
+						/>
 					</div>
 				</div>
 			</div>

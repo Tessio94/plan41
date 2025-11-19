@@ -1,12 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import { GiCheckMark } from "react-icons/gi";
 
 const Intro2 = () => {
 	return (
 		<section
 			id="intro"
-			className="bg-background2 px-6 sm:px-10 lg:px-18  2xl:px-28 py-26"
+			className="relative bg-background2 px-6 sm:px-10 lg:px-18  2xl:px-28 py-26"
 		>
 			<div className="flex flex-row justify-between items-center gap-40">
 				<div className="w-1/2">

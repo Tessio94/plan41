@@ -28,9 +28,9 @@ const ScrollWrapper = () => {
 			{showScrollToTop && (
 				<div
 					onClick={scrollToTop}
-					className="group bg-theme1 bg-opacity-35 fixed right-2 bottom-5 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-xl p-3 hover:bg-white focus:bg-white active:bg-white transition-all duration-300 border-2 border-theme1"
+					className="group bg-theme3  bg-opacity-35 fixed right-2 bottom-5 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-xl p-3 hover:bg-white focus:bg-white active:bg-white transition-all duration-300 border-2 border-theme3"
 				>
-					<FaArrowUp className="group-hover:text-theme1 group-focus:text-theme1 group-active:text-theme1 text-5xl text-white transition-all duration-300" />
+					<FaArrowUp className="group-hover:text-theme3 group-focus:text-theme1 group-active:text-theme1 text-5xl text-theme1 transition-all duration-300" />
 				</div>
 			)}
 		</>
