@@ -11,6 +11,7 @@ html {
 	--theme1: #004277;
 	--theme2: #013e99;
 	--theme3: #d9a445;
+	/* --theme3: #e2d426; */
 	--theme4: #93845c;
 }
 
@@ -47,6 +48,42 @@ body {
 	-webkit-text-stroke-width: 2px;
 }
 
+@custom-variant max_3xl {
+	@media (width < 1600px) {
+		@slot;
+	}
+}
+
+@custom-variant max_2sm {
+	@media (width < 750px) {
+		@slot;
+	}
+}
+
+@custom-variant max_sm {
+	@media (width < 640px) {
+		@slot;
+	}
+}
+
+@custom-variant max_xsm {
+	@media (width < 370px) {
+		@slot;
+	}
+}
+
+/* @custom-variant 1_5xl {
+  @media (width > 1450px) {
+    @slot;
+  }
+}
+
+@custom-variant xsm {
+  @media (width < 430px) {
+    @slot;
+  }
+} */
+
 .svg {
 	position: absolute;
 	width: 0;
@@ -71,3 +108,26 @@ body {
 	-webkit-clip-path: url(#my-clip-path2);
 	clip-path: url(#my-clip-path2);
 }
+
+.card::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: conic-gradient(
+		var(--theme1),
+		var(--theme2),
+		var(--theme3),
+		var(--theme4)
+	);
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: -1;
+	padding: 20px;
+}
+
+/* .card::before {
+	filter: blur(1.5rem);
+	opacity: 0.8;
+} */

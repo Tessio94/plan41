@@ -32,7 +32,7 @@ const Intro2 = () => {
 						Vjerujem da iza svakog iskoraka stoji plan:
 					</p>
 					<ul className="flex flex-col gap-7 items-start">
-						<li className="flex flex-row items-center text-xl gap-7 py-3 px-5 bg-theme2/20 w-full border-2 border-theme1 rounded-2xl shadow-xl shadow-theme2/40  hover:bg-theme2/30 transition-colors duration-300">
+						<li className="flex flex-row items-center text-xl gap-7 py-3 px-5 bg-linear-to-br from-transparent to-theme2/40 w-full border-2 border-theme1 rounded-2xl shadow-xl shadow-theme2/40  hover:bg-linear-to-br hover:from-theme2/10 hover:to-theme2/60 transition-colors duration-300">
 							<Image
 								src="/ikone/vision.svg"
 								alt="vizija ikona"
@@ -45,7 +45,7 @@ const Intro2 = () => {
 								cumque.
 							</p>
 						</li>
-						<li className="flex flex-row items-center text-xl gap-7 py-3 px-5 bg-theme2/20 w-full border-2 border-theme1 rounded-2xl shadow-xl shadow-theme2/40  hover:bg-theme2/30 transition-colors duration-300">
+						<li className="flex flex-row items-center text-xl gap-7 py-3 px-5 bg-linear-to-br from-transparent to-theme2/40 w-full border-2 border-theme1 rounded-2xl shadow-xl shadow-theme2/40  hover:bg-linear-to-br hover:from-theme2/10 hover:to-theme2/60 transition-colors duration-300">
 							<Image
 								src="/ikone/structure.svg"
 								alt="struktura ikona"
@@ -58,7 +58,7 @@ const Intro2 = () => {
 								cumque.
 							</p>
 						</li>
-						<li className="flex flex-row items-center text-xl gap-7 py-3 px-5 bg-theme2/20 w-full border-2 border-theme1 rounded-2xl shadow-xl shadow-theme2/40  hover:bg-theme2/30 transition-colors duration-300">
+						<li className="flex flex-row items-center text-xl gap-7 py-3 px-5 bg-linear-to-br from-transparent to-theme2/40 w-full border-2 border-theme1 rounded-2xl shadow-xl shadow-theme2/40  hover:bg-linear-to-br hover:from-theme2/10 hover:to-theme2/60 transition-colors duration-300">
 							<Image
 								src="/ikone/support.svg"
 								alt="podrška ikona"

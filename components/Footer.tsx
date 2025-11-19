@@ -1,12 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {
-	CiInstagram,
-	CiLocationArrow1,
-	CiLocationOn,
-	CiMail,
-	CiMobile3,
-} from "react-icons/ci";
+import { CiInstagram, CiLocationOn, CiMail, CiMobile3 } from "react-icons/ci";
 
 const Footer = () => {
 	return (

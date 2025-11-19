@@ -1,6 +1,7 @@
 "use client";
 
 import ClipPathIcons from "./icons/ClipPathIcons";
+import NounIcon from "./icons/NounIcon";
 
 export default function Steps2() {
 	return (
@@ -22,13 +23,14 @@ export default function Steps2() {
 			</div>
 
 			<div className="">
-				<div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-10">
-					<div className="relative w-full h-full max-w-85 max-h-85 min-h-70 min-w-70 z-20 group shadow-[30px_30px_30px_#0041772f] rounded-br-2xl">
+				<div className="grid sm:grid-cols-2 2xl:grid-cols-4 gap-10 place-items-center">
+					<div className="relative w-full max-w-85 h-75 min-h-70 min-w-70 z-20 group shadow-[30px_30px_30px_#0041772f] rounded-br-2xl">
+						<p className="text-[34px]  font-bold absolute left-12 top-3.5 font-playfair">
+							Ideja
+						</p>
 						<div className="absolute inset-0 card bg-theme1 z-20 group-hover:translate-y-2.5 transition-translate  duration-300"></div>
 						<div className="absolute inset-0 card-border bg-blue-50 group-hover:bg-blue-100  transition-colors duration-300 z-20">
-							<p className="text-3xl  font-bold absolute right-[14%] top-[7%] after:content-[''] after:absolute after:h-1 after:left-0 after:right-full after:top-full after:bg-theme3  group-hover:after:right-1/2 after:transition-all after:duration-300 before:content-[''] before:absolute before:h-1 after:rounded-l-full before:rounded-r-full before:right-0 before:left-full before:top-full before:bg-theme3  group-hover:before:left-1/2 before:transition-all before:duration-300 font-playfair">
-								Ideja
-							</p>
+							<NounIcon type="idea" />
 							<div className="flex flex-col py-6 pl-6 pr-3 gap-2 mt-[25%]">
 								<p className="text-2xl">
 									Svaka dobra{" "}
@@ -40,12 +42,13 @@ export default function Steps2() {
 							</div>
 						</div>
 					</div>
-					<div className="relative w-full h-full max-w-85 max-h-85 min-h-70 min-w-70 z-20 group shadow-[30px_30px_30px_#0041772f] rounded-br-2xl">
+					<div className="relative w-full max-w-85 h-75 min-h-70 min-w-70 z-20 group shadow-[30px_30px_30px_#0041772f] rounded-br-2xl">
+						<p className="text-[32px]  font-bold absolute left-2 top-3.5 font-playfair max_3xl:text-[30px] max_3xl:top-4.5 max-2xl:text-[32px]! max-2xl:top-3.5! max_2sm:text-[28px]! max_2sm:top-4.5! max_sm:text-[32px]! max_xsm:text-[30px]!">
+							Struktura
+						</p>
 						<div className="absolute inset-0 card bg-theme1 z-20 group-hover:translate-y-2.5 transition-translate  duration-300"></div>
 						<div className="absolute inset-0 card-border bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300 z-20">
-							<p className="text-3xl font-bold absolute right-[3%] top-[7%] after:content-[''] after:absolute after:h-1 after:left-0 after:right-full after:top-full after:bg-theme3  group-hover:after:right-1/2 after:transition-all after:duration-300 before:content-[''] before:absolute before:h-1 after:rounded-l-full before:rounded-r-full before:right-0 before:left-full before:top-full before:bg-theme3  group-hover:before:left-1/2 before:transition-all before:duration-300 font-playfair">
-								Struktura
-							</p>
+							<NounIcon type="structure" />
 							<div className="flex flex-col py-6 pl-6 pr-3 gap-2 mt-[25%]">
 								<p className="text-2xl">
 									Jasna{" "}
@@ -58,12 +61,13 @@ export default function Steps2() {
 							</div>
 						</div>
 					</div>
-					<div className="relative w-full h-full max-w-85 max-h-85 min-h-70 min-w-70 z-20 group shadow-[30px_30px_30px_#0041772f] rounded-br-2xl">
+					<div className="relative w-full max-w-85 h-75 min-h-70 min-w-70 z-20 group shadow-[30px_30px_30px_#0041772f] rounded-br-2xl">
+						<p className="text-[34px]  font-bold absolute left-13 top-3.5 font-playfair">
+							Plan
+						</p>
 						<div className="absolute inset-0 card bg-theme1 z-20 group-hover:translate-y-2.5 transition-translate  duration-300"></div>
 						<div className="absolute inset-0 card-border bg-blue-50 z-20 group-hover:bg-blue-100 transition-colors duration-300">
-							<p className="text-3xl font-bold absolute right-[15%] top-[7%] after:content-[''] after:absolute after:h-1 after:left-0 after:right-full after:top-full after:bg-theme1  group-hover:after:right-1/2 after:transition-all after:duration-300 before:content-[''] before:absolute before:h-1 after:rounded-l-full before:rounded-r-full before:right-0 before:left-full before:top-full before:bg-theme1  group-hover:before:left-1/2 before:transition-all before:duration-300 font-playfair">
-								Plan
-							</p>
+							<NounIcon type="plan" />
 							<div className="flex flex-col py-6 pl-6 pr-3 gap-2 mt-[25%]">
 								<p className="text-2xl">
 									<strong className="group-hover:text-theme3 transition-colors duration-300">
@@ -76,12 +80,13 @@ export default function Steps2() {
 						</div>
 					</div>
 
-					<div className="relative w-full h-full max-w-85 max-h-85 min-h-70 min-w-70 z-20 group shadow-[30px_30px_30px_#0041772f] rounded-br-2xl">
+					<div className="relative w-full max-w-85 h-75 min-h-70 min-w-70 z-20 group shadow-[30px_30px_30px_#0041772f] rounded-br-2xl">
+						<p className="text-[34px]  font-bold absolute left-11 top-3.5 font-playfair max_3xl:left-9">
+							Akcija
+						</p>
 						<div className="absolute inset-0 card bg-theme1 z-20 group-hover:translate-y-2.5 transition-translate  duration-300"></div>
 						<div className="absolute inset-0 card-border  bg-blue-50 group-hover:bg-blue-100  transition-colors duration-300  z-20 ">
-							<p className="text-3xl font-bold absolute right-[12%] top-[7%] after:content-[''] after:absolute after:h-1 after:left-0 after:right-full after:top-full after:bg-theme1  group-hover:after:right-1/2 after:transition-all after:duration-300 before:content-[''] before:absolute before:h-1 after:rounded-l-full before:rounded-r-full before:right-0 before:left-full before:top-full before:bg-theme1  group-hover:before:left-1/2 before:transition-all before:duration-300 font-playfair">
-								Akcija
-							</p>
+							<NounIcon type="action" />
 							<div className="flex flex-col py-6 pl-6 pr-3 gap-2 mt-[25%]">
 								<p className="text-2xl">
 									Brza{" "}
