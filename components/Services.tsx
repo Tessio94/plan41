@@ -1,89 +1,189 @@
 "use client";
+
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import * as motion from "motion/react-client";
+import { cn } from "@/lib/utils";
 import { FaArrowRight } from "react-icons/fa";
-import { GiCheckMark } from "react-icons/gi";
+import { FaCircleChevronDown } from "react-icons/fa6";
 
 const Services = () => {
-	const [animationState, setAnimationState] = useState("paused");
+  const [dropdown, setDropdown] = useState("");
 
-	return (
-		<section className="bg-background px-6 sm:px-10 lg:px-18  2xl:px-28 py-26 z-0 relative">
-			<h3 className="relative text-6xl font-bold font-playfair mb-15 after:content-[''] after:absolute after:h-[5px] after:left-0  after:top-[105%] after:bg-theme3 after:w-25 before:content-[''] before:absolute before:h-3 before:w-3 before:left-25  before:top-[calc(100%-1px)]  before:bg-theme3 before:rotate-45">
-				Usluge
-			</h3>
-			<div className="flex flex-row w-full items-center max-w-[85%] mx-auto ">
-				{/* <motion.div className="relative flex flex-col gap-6 w-1/2 bg-background2 py-8 px-6 rounded-2xl  intro-card"> */}
-				<motion.div
-					className="relative  w-1/2  rounded-2xl bg-conic/[from_var(--border-angle)] from-theme3/30 via-theme3 to-theme1 p-1 shadow-xl shadow-theme1/20"
-					onMouseEnter={(e) => {
-						e.currentTarget.classList.add("animate-rotate-border");
-						e.currentTarget.style.animationPlayState = "running";
-					}}
-					onMouseLeave={(e) => {
-						e.currentTarget.style.animationPlayState = "paused";
-					}}
-				>
-					<div className="flex flex-col gap-6 py-8 px-6 bg-background2 rounded-2xl">
-						<p className="text-2xl font-inter ">
-							Pomažem u svim fazama razvoja poslovanja — od pokretanja obrta ili
-							poduzeća do širenja postojećeg poslovanja.
-						</p>
-						<p className="text-2xl font-inter">
-							Pomažem oblikovati poslovnu ideju, pripremiti svu potrebnu
-							dokumentaciju i argumentirano obrazložiti održivost vašeg
-							projekta.
-						</p>
-						<ul className="flex flex-col gap-8 items-start mt-4">
-							<li className="flex flex-row gap-6 items-center">
-								<GiCheckMark className="text-3xl text-theme3" />
-								<p className="text-2xl font-semibold font-inter">
-									Poslovno savjetovanje
-								</p>
-							</li>
-							<li className="flex flex-row gap-6 items-center">
-								<GiCheckMark className="text-3xl text-theme3" />
-								<p className="text-2xl font-semibold font-inter">
-									Financijsko planiranje i investicijske studije
-								</p>
-							</li>
-							<li className="flex flex-row gap-6 items-center">
-								<GiCheckMark className="text-3xl text-theme3" />
-								<p className="text-2xl font-semibold font-inter">
-									Poslovni planovi za poticaje HZZ-a (samozapošljavanje)
-								</p>
-							</li>
-						</ul>
-						<div>
-							<Link
-								href="/#intro"
-								className="flex flex-row gap-5 text-theme1 bg-theme3 py-3 px-5 items-center rounded-xl w-fit text-2xl font-bold mt-5 hover:bg-theme4 hover:text-theme2 transition-colors duration-300 group mx-auto"
-							>
-								Usluge{" "}
-								<FaArrowRight className="group-hover:translate-x-1.5 transition-translate duration-300" />
-							</Link>
-						</div>
-					</div>
-				</motion.div>
-				<motion.div
-					className="w-1/2 -ml-18 -z-10"
-					initial={{ opacity: 0, y: 50 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 1 }}
-				>
-					<Image
-						className="w-full h-full rounded-2xl  shadow-xl shadow-theme1/20"
-						src="/financije3_50.jpg"
-						alt="financije bilježnica"
-						width={960}
-						height={1080}
-					/>
-				</motion.div>
-			</div>
-		</section>
-	);
+  return (
+    <section className="bg-background px-6 py-26 sm:px-10 lg:px-18 2xl:px-28">
+      <motion.h2
+        className="font-playfair after:bg-theme3 before:bg-theme3 relative mb-15 text-6xl font-bold before:absolute before:top-[calc(100%-1px)] before:left-25 before:h-3 before:w-3 before:rotate-45 before:content-[''] after:absolute after:top-[105%] after:left-0 after:h-[5px] after:w-25 after:content-['']"
+        initial={{ x: -50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        Usluge
+      </motion.h2>
+      <div className="flex flex-row gap-15">
+        <div className="flex w-1/2 flex-col gap-5">
+          <motion.p
+            className="font-inter text-2xl"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            Želite li ući u svijet poduzetništva, krenite od onoga u čemu ste
+            autentični. Sljedeći korak je strategija, a kada dođete do poslovnog
+            plana, obratite mi se
+          </motion.p>
+          <motion.p
+            className="font-inter text-2xl"
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            Ukoliko ste svoju poslovnu ideju sami razradili i pripemili poslovni
+            plan, ukoliko želite savjet, mentorstvo, podršku i pomoć, zatražite
+            to
+          </motion.p>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <Link
+              href="/#intro"
+              className="bg-theme1 hover:bg-theme2 hover:text-theme3 border-theme2 hover:border-theme3 group mt-5 flex w-fit flex-row items-center gap-5 rounded-xl border-2 px-5 py-3 text-2xl font-bold text-slate-100 transition-colors duration-300"
+            >
+              Pogledajte više{" "}
+              <FaArrowRight className="transition-translate duration-300 group-hover:translate-x-1.5" />
+            </Link>
+          </motion.div>
+        </div>
+        <div className="relative z-0 w-1/2">
+          <Image
+            className="absolute -top-[170px] right-0 -z-1"
+            src="/ikone/consulting.svg"
+            alt="planiranje ikona"
+            width={140}
+            height={140}
+          />
+          <Image
+            className="absolute -top-[170px] left-0 -z-1"
+            src="/ikone/planning.svg"
+            alt="planiranje ikona"
+            width={160}
+            height={160}
+          />
+          <Image
+            className="absolute right-[50%] -bottom-[90px] -z-1"
+            src="/ikone/poslovni-planovi.svg"
+            alt="planiranje ikona"
+            width={180}
+            height={180}
+          />
+          <ul className="bg-background2 absolute top-0 left-0 z-10">
+            <li
+              className="border-theme1 to-theme2/40 hover:from-theme2/10 hover:to-theme2/60 group cursor-pointer rounded-t-2xl border-2 border-b-0 bg-linear-to-br from-transparent px-5 py-3 transition-colors duration-500 hover:bg-linear-to-br"
+              onClick={() =>
+                dropdown !== "d1" ? setDropdown("d1") : setDropdown("")
+              }
+            >
+              <p className="font-inter flex flex-row items-center justify-between gap-5 text-2xl font-semibold">
+                Poslovno savjetovanje
+                <FaCircleChevronDown
+                  className={cn(
+                    "rotate-0 text-3xl transition-all duration-500",
+                    dropdown === "d1" && "rotate-180",
+                  )}
+                />
+              </p>
+              <div
+                className={cn(
+                  "transition-all duration-500",
+                  dropdown === "d1"
+                    ? "visible max-h-200 opacity-100"
+                    : "invisible max-h-0 opacity-0",
+                )}
+              >
+                <p className="pt-2 text-lg">
+                  Izrađujem poslovne planove, investicijske studije i analize
+                  isplativosti koje služe kao temelj za donošenje odluka,
+                  apliciranje na kredite il Uz stručnu pripremu dokumentacije,
+                  pružam i podršku u pregovorima s kreditorima.
+                </p>
+              </div>
+            </li>
+            <li
+              className="border-theme1 to-theme2/40 hover:from-theme2/10 hover:to-theme2/60 group cursor-pointer border-2 border-b-0 bg-linear-to-br from-transparent px-5 py-3 transition-colors duration-500 hover:bg-linear-to-br"
+              onClick={() =>
+                dropdown !== "d2" ? setDropdown("d2") : setDropdown("")
+              }
+            >
+              <p className="font-inter flex flex-row items-center justify-between gap-5 text-2xl font-semibold">
+                Financijsko planiranje i investicijske studije
+                <FaCircleChevronDown
+                  className={cn(
+                    "rotate-0 text-3xl transition-all duration-500",
+                    dropdown === "d2" && "rotate-180",
+                  )}
+                />
+              </p>
+              <div
+                className={cn(
+                  "transition-all duration-500",
+                  dropdown === "d2"
+                    ? "visible max-h-200 opacity-100"
+                    : "invisible max-h-0 opacity-0",
+                )}
+              >
+                <p className="pt-2 text-lg">
+                  Izrađujem poslovne planove, investicijske studije i analize
+                  isplativosti koje služe kao temelj za donošenje odluka,
+                  apliciranje na kredite il Uz stručnu pripremu dokumentacije,
+                  pružam i podršku u pregovorima s kreditorima.
+                </p>
+              </div>
+            </li>
+            <li
+              className="border-theme1 to-theme2/40 hover:from-theme2/10 hover:to-theme2/60 group cursor-pointer rounded-b-2xl border-2 bg-linear-to-br from-transparent px-5 py-3 transition-colors duration-500 hover:bg-linear-to-br"
+              onClick={() =>
+                dropdown !== "d3" ? setDropdown("d3") : setDropdown("")
+              }
+            >
+              <p className="font-inter flex flex-row items-center justify-between gap-5 text-2xl font-semibold">
+                Poslovni planovi za poticaje HZZ-a (samozapošljavanje)
+                <FaCircleChevronDown
+                  className={cn(
+                    "rotate-0 text-3xl transition-all duration-500",
+                    dropdown === "d3" && "rotate-180",
+                  )}
+                />
+              </p>
+              <div
+                className={cn(
+                  "transition-all duration-500",
+                  dropdown === "d3"
+                    ? "visible max-h-200 opacity-100"
+                    : "invisible max-h-0 opacity-0",
+                )}
+              >
+                <p className="pt-2 text-lg">
+                  Pomoći ću vam u izradi{" "}
+                  <strong>
+                    poslovnih planova za potpore Hrvatskog zavoda za
+                    zapošljavanje (HZZ)
+                  </strong>{" "}
+                  namijenjene samozapošljavanju. Pomažem vam oblikovati poslovnu
+                  ideju u jasnu i izvedivu strukturu, pripremiti svu potrebnu
+                  dokumentaciju i argumentirano obrazložiti održivost vašeg
+                  projekta — sve kako bi vaš zahtjev imao najbolje šanse za
+                  odobrenje.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Services;

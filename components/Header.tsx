@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CgArrowLongUp } from "react-icons/cg";
 import { CiMail, CiMobile3 } from "react-icons/ci";
 
 const Header = () => {
@@ -16,7 +17,11 @@ const Header = () => {
 					width={110}
 					height={110}
 				/>
-				Plan41
+
+				<span className="flex flex-row">
+					Plan4
+					<CgArrowLongUp className="-ml-[18px] mt-2" />
+				</span>
 			</Link>
 			<nav className="hidden lg:block">
 				<ul className="flex items-center lg:gap-8 xl:gap-22">
