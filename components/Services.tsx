@@ -14,15 +14,15 @@ const Services = () => {
   return (
     <section className="bg-background px-6 py-26 sm:px-10 lg:px-18 2xl:px-28">
       <motion.h2
-        className="font-playfair after:bg-theme3 before:bg-theme3 relative mb-15 text-6xl font-bold before:absolute before:top-[calc(100%-1px)] before:left-25 before:h-3 before:w-3 before:rotate-45 before:content-[''] after:absolute after:top-[105%] after:left-0 after:h-[5px] after:w-25 after:content-['']"
+        className="font-playfair after:bg-theme3 before:bg-theme3 relative mb-15 text-6xl font-bold before:absolute before:top-[calc(105%-4px)] before:left-25 before:h-3 before:w-3 before:rotate-45 before:content-[''] after:absolute after:top-[105%] after:left-0 after:h-[5px] after:w-25 after:content-['']"
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
         viewport={{ once: true, amount: 0.3 }}
       >
         Usluge
       </motion.h2>
-      <div className="flex flex-row gap-15">
-        <div className="flex w-1/2 flex-col gap-5">
+      <div className="flex flex-col gap-15 md:gap-25 lg:flex-row lg:gap-10 xl:gap-13 2xl:gap-15">
+        <div className="flex w-full flex-col gap-5 lg:w-1/2">
           <motion.p
             className="font-inter text-2xl"
             initial={{ y: 50, opacity: 0 }}
@@ -57,29 +57,29 @@ const Services = () => {
             </Link>
           </motion.div>
         </div>
-        <div className="relative z-0 w-1/2">
+        <div className="xsm:min-h-[450px] relative z-0 min-h-[550px] w-full sm:min-h-[380px] md:min-h-[300px] lg:min-h-[unset] lg:w-1/2">
           <Image
-            className="absolute -top-[170px] right-0 -z-1"
+            className="absolute -top-[170px] right-0 -z-1 block max-[450px]:hidden"
             src="/ikone/consulting.svg"
             alt="planiranje ikona"
             width={140}
             height={140}
           />
           <Image
-            className="absolute -top-[170px] left-0 -z-1"
+            className="absolute -bottom-[90px] left-0 -z-1 lg:-top-[170px] lg:bottom-[unset]"
             src="/ikone/planning.svg"
             alt="planiranje ikona"
             width={160}
             height={160}
           />
           <Image
-            className="absolute right-[50%] -bottom-[90px] -z-1"
+            className="xsm:right-5 xsm:bottom-0 absolute right-1 bottom-5 -z-1 sm:right-20 sm:-bottom-[70px] lg:right-[50%] lg:-bottom-[90px]"
             src="/ikone/poslovni-planovi.svg"
             alt="planiranje ikona"
             width={180}
             height={180}
           />
-          <ul className="bg-background2 absolute top-0 left-0 z-10">
+          <ul className="bg-background2 absolute top-0 left-0 z-10 rounded-t-2xl rounded-b-2xl">
             <li
               className="border-theme1 to-theme2/40 hover:from-theme2/10 hover:to-theme2/60 group cursor-pointer rounded-t-2xl border-2 border-b-0 bg-linear-to-br from-transparent px-5 py-3 transition-colors duration-500 hover:bg-linear-to-br"
               onClick={() =>
@@ -90,7 +90,7 @@ const Services = () => {
                 Poslovno savjetovanje
                 <FaCircleChevronDown
                   className={cn(
-                    "rotate-0 text-3xl transition-all duration-500",
+                    "shrink-0 rotate-0 text-3xl transition-all duration-500",
                     dropdown === "d1" && "rotate-180",
                   )}
                 />
@@ -121,7 +121,7 @@ const Services = () => {
                 Financijsko planiranje i investicijske studije
                 <FaCircleChevronDown
                   className={cn(
-                    "rotate-0 text-3xl transition-all duration-500",
+                    "shrink-0 rotate-0 text-3xl transition-all duration-500",
                     dropdown === "d2" && "rotate-180",
                   )}
                 />
@@ -152,7 +152,7 @@ const Services = () => {
                 Poslovni planovi za poticaje HZZ-a (samozapošljavanje)
                 <FaCircleChevronDown
                   className={cn(
-                    "rotate-0 text-3xl transition-all duration-500",
+                    "shrink-0 rotate-0 text-3xl transition-all duration-500",
                     dropdown === "d3" && "rotate-180",
                   )}
                 />

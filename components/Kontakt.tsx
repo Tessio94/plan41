@@ -9,7 +9,7 @@ const Kontakt = () => {
     <section className="bg-theme1 max_3xl:flex-col max_3xl:items-start flex flex-row items-end justify-between px-6 py-26 sm:px-10 lg:px-18 2xl:px-28">
       <div className="relative flex flex-col gap-5">
         <motion.h2
-          className="font-playfair after:bg-theme3 before:bg-theme3 relative mb-2 text-6xl font-bold text-slate-100 before:absolute before:top-[calc(108%-1px)] before:left-25 before:h-3 before:w-3 before:rotate-45 before:content-[''] after:absolute after:top-[113%] after:left-0 after:h-[5px] after:w-25 after:content-['']"
+          className="font-playfair after:bg-theme3 before:bg-theme3 relative mb-2 text-6xl font-bold text-slate-100 before:absolute before:top-[calc(113%-4px)] before:left-25 before:h-3 before:w-3 before:rotate-45 before:content-[''] after:absolute after:top-[113%] after:left-0 after:h-[5px] after:w-25 after:content-[''] max-[450px]:text-5xl"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
           viewport={{ once: true, amount: 0.3 }}
@@ -34,7 +34,7 @@ const Kontakt = () => {
           Veselim se prilici da zajedno pronađemo najbolje rješenje.
         </motion.p>
         <motion.div
-          className="absolute -right-28 bottom-0"
+          className="xsm:right-10 absolute right-2 -bottom-34 xl:-right-28 xl:bottom-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, transition: { duration: 1 } }}
           viewport={{ once: true, amount: 0.3 }}

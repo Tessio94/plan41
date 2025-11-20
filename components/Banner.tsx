@@ -1,17 +1,17 @@
 import React from "react";
 
 const Banner = () => {
-	return (
-		<div className="flex flex-col gap-8 bg-theme1 text-theme3  px-6 sm:px-10 lg:px-18  2xl:px-28  py-10 my-[1px]">
-			<p className="text-4xl font-playfair italic font-semibold">
-				“Plan for what it is difficult while it is easy, do what is great while
-				it is small.”
-			</p>
-			<p className="relative self-start text-2xl font-playfair font-semibold italic after:content-[''] after:absolute after:h-0.5 after:left-0 after:-translate-x-full after:top-1/2 after:bg-theme3 after:w-15 before:content-[''] before:absolute before:h-0.5 before:w-15 before:right-0 before:translate-x-full  before:top-1/2 before:bg-theme3 ml-15">
-				Sun Tzu
-			</p>
-		</div>
-	);
+  return (
+    <div className="bg-theme1 text-theme3 my-px flex flex-col gap-8 px-6 py-10 sm:px-10 lg:px-18 2xl:px-28">
+      <p className="font-playfair text-3xl font-semibold italic max-[500px]:text-2xl md:text-4xl">
+        “Plan for what it is difficult while it is easy, do what is great while
+        it is small.”
+      </p>
+      <p className="font-playfair after:bg-theme3 before:bg-theme3 relative ml-15 self-start text-2xl font-semibold italic before:absolute before:top-1/2 before:right-0 before:h-0.5 before:w-15 before:translate-x-full before:content-[''] after:absolute after:top-1/2 after:left-0 after:h-0.5 after:w-15 after:-translate-x-full after:content-['']">
+        Sun Tzu
+      </p>
+    </div>
+  );
 };
 
 export default Banner;

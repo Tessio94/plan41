@@ -1,78 +1,84 @@
 @import "tailwindcss";
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 :root {
-	--background: #fffffe;
-	--background2: #faf9f6;
-	--theme0: #69bbe1;
-	--theme1: #004277;
-	--theme2: #013e99;
-	--theme3: #d9a445;
-	/* --theme3: #e2d426; */
-	--theme4: #93845c;
+  --background: #fffffe;
+  --background2: #faf9f6;
+  --theme0: #69bbe1;
+  --theme1: #004277;
+  --theme2: #013e99;
+  --theme3: #d9a445;
+  /* --theme3: #e2d426; */
+  --theme4: #93845c;
 }
 
 @theme inline {
-	--color-background: var(--background);
-	--color-background2: var(--background2);
-	--color-theme0: var(--theme0);
-	--color-theme1: var(--theme1);
-	--color-theme2: var(--theme2);
-	--color-theme3: var(--theme3);
-	--color-theme4: var(--theme4);
+  --color-background: var(--background);
+  --color-background2: var(--background2);
+  --color-theme0: var(--theme0);
+  --color-theme1: var(--theme1);
+  --color-theme2: var(--theme2);
+  --color-theme3: var(--theme3);
+  --color-theme4: var(--theme4);
 
-	--color-theme1_tr: var(--theme1_tr);
-	--font-playfair: var(--playfair);
-	--font-inter: var(--inter);
+  --color-theme1_tr: var(--theme1_tr);
+  --font-playfair: var(--playfair);
+  --font-inter: var(--inter);
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--background: #ffffff;
-		--theme1: #00619e;
-	}
+  :root {
+    --background: #ffffff;
+    --theme1: #00619e;
+  }
 }
 
 body {
-	background: var(--background);
-	position: relative;
-	color: var(--theme1);
-	font-family: Arial, Helvetica, sans-serif;
-	/* max-width: 1920px; */
-	overflow-x: hidden;
-	/* margin: 0 auto; */
+  background: var(--background);
+  position: relative;
+  color: var(--theme1);
+  font-family: Arial, Helvetica, sans-serif;
+  /* max-width: 1920px; */
+  overflow-x: hidden;
+  /* margin: 0 auto; */
 }
 
 @utility my-text-stroke {
-	-webkit-text-stroke: var(--theme3);
-	-webkit-text-stroke-width: 2px;
+  -webkit-text-stroke: var(--theme3);
+  -webkit-text-stroke-width: 2px;
 }
 
 @custom-variant max_3xl {
-	@media (width < 1600px) {
-		@slot;
-	}
+  @media (width < 1600px) {
+    @slot;
+  }
 }
 
 @custom-variant max_2sm {
-	@media (width < 750px) {
-		@slot;
-	}
+  @media (width < 750px) {
+    @slot;
+  }
 }
 
 @custom-variant max_sm {
-	@media (width < 640px) {
-		@slot;
-	}
+  @media (width < 640px) {
+    @slot;
+  }
+}
+
+@custom-variant xsm {
+  @media (width > 430px) {
+    @slot;
+  }
 }
 
 @custom-variant max_xsm {
-	@media (width < 370px) {
-		@slot;
-	}
+  @media (width < 370px) {
+    @slot;
+  }
 }
 
 /* @custom-variant 1_5xl {
@@ -81,61 +87,57 @@ body {
   }
 }
 
-@custom-variant xsm {
-  @media (width < 430px) {
-    @slot;
-  }
-} */
+ */
 
 .svg {
-	position: absolute;
-	width: 0;
-	height: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 .cover-card {
-	/* width: 100%; */
-	/* height: 350px; */
-	background-size: cover;
-	-webkit-clip-path: url(#my-clip-path);
-	clip-path: url(#my-clip-path);
+  /* width: 100%; */
+  /* height: 350px; */
+  background-size: cover;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
 }
 
 .card {
-	width: 100%;
-	/* height: 350px; */
-	background-size: cover;
-	-webkit-clip-path: url(#my-clip-path);
-	clip-path: url(#my-clip-path);
+  width: 100%;
+  /* height: 350px; */
+  background-size: cover;
+  -webkit-clip-path: url(#my-clip-path);
+  clip-path: url(#my-clip-path);
 }
 
 .card-border {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-size: cover;
-	-webkit-clip-path: url(#my-clip-path2);
-	clip-path: url(#my-clip-path2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  -webkit-clip-path: url(#my-clip-path2);
+  clip-path: url(#my-clip-path2);
 }
 
 .card::after {
-	content: "";
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	background-image: conic-gradient(
-		var(--theme1),
-		var(--theme2),
-		var(--theme3),
-		var(--theme4)
-	);
-	top: 50%;
-	left: 50%;
-	translate: -50% -50%;
-	z-index: -1;
-	padding: 20px;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    var(--theme1),
+    var(--theme2),
+    var(--theme3),
+    var(--theme4)
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 20px;
 }
 
 /* .intro-card::after,
@@ -165,17 +167,17 @@ body {
 } */
 
 @property --border-angle {
-	syntax: "<angle>";
-	inherits: false;
-	initial-value: 0deg;
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
 }
 
 @theme {
-	--animate-rotate-border: border-rotate 10s linear infinite;
+  --animate-rotate-border: border-rotate 10s linear infinite;
 
-	@keyframes border-rotate {
-		to {
-			--border-angle: 360deg;
-		}
-	}
+  @keyframes border-rotate {
+    to {
+      --border-angle: 360deg;
+    }
+  }
 }
