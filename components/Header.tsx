@@ -1,11 +1,24 @@
+"use client";
+
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CgArrowLongUp } from "react-icons/cg";
 import { CiMail, CiMobile3 } from "react-icons/ci";
 
 const Header = () => {
+  const pathname = usePathname();
+
   return (
-    <header className="absolute top-0 right-0 left-0 z-20 flex max-w-screen flex-row items-center justify-between bg-blue-950/40 px-8 py-5 backdrop-blur-xs lg:px-12 xl:px-30">
+    <header
+      className={cn(
+        "z-20 flex max-w-screen flex-row items-center justify-between px-8 py-5 backdrop-blur-xs lg:px-12 xl:px-30",
+        pathname === "/"
+          ? "bg-blue-950/40"
+          : "bg-[url('/frame-1.png')] bg-cover bg-no-repeat",
+      )}
+    >
       <Link
         href="/"
         className="font-playfair text-theme3 flex flex-row items-center gap-4 text-5xl font-bold"
@@ -62,7 +75,7 @@ const Header = () => {
       <div className="hidden flex-row max-[1350px]:flex-col lg:flex">
         <a
           href="tel:+385 99 312 4867"
-          className="text-heading1 font-playfair bg-theme2 text-background border-theme1 hover:bg-background hover:text-theme1 flex cursor-pointer items-center gap-1 rounded-2xl border-2 py-2 pr-9 pl-3 text-xl font-semibold tracking-wider transition-all duration-300 max-[1350px]:rounded-b-none max-[1350px]:py-1 xl:gap-2"
+          className="text-heading1 font-playfair max-[1350px]:hover:border-theme3 max-[1350px]:border-b-none bg-theme2 text-background border-theme1 hover:bg-background hover:text-theme1 flex cursor-pointer items-center gap-1 rounded-2xl border-2 py-2 pr-9 pl-3 text-xl font-semibold tracking-wider transition-all duration-300 max-[1350px]:rounded-b-none max-[1350px]:py-1 xl:gap-2"
         >
           <CiMobile3 className="text-heading1 ml-[-3px] text-2xl" />
           <span className="after:bg-theme1 font-mont relative inline-block after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0">

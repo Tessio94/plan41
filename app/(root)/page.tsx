@@ -7,17 +7,17 @@ import Kontakt from "@/components/Kontakt";
 import Banner from "@/components/Banner";
 
 const page = () => {
-	return (
-		<main>
-			<Cover />
-			<Intro2 />
-			<Steps2 />
-			<Vision />
-			<Services />
-			<Kontakt />
-			<Banner />
-		</main>
-	);
+  return (
+    <main>
+      <Cover />
+      <Intro2 />
+      <Steps2 />
+      <Vision />
+      <Services />
+      <Kontakt />
+      <Banner type="landing" />
+    </main>
+  );
 };
 
 export default page;

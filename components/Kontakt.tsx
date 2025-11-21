@@ -34,7 +34,7 @@ const Kontakt = () => {
           Veselim se prilici da zajedno pronađemo najbolje rješenje.
         </motion.p>
         <motion.div
-          className="xsm:right-10 absolute right-2 -bottom-34 xl:-right-28 xl:bottom-0"
+          className="xsm:right-10 absolute right-2 -bottom-34 xl:-right-28! xl:bottom-0"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, transition: { duration: 1 } }}
           viewport={{ once: true, amount: 0.3 }}

@@ -46,9 +46,13 @@ body {
   /* margin: 0 auto; */
 }
 
+section {
+  overflow: hidden;
+}
+
 @utility my-text-stroke {
-  -webkit-text-stroke: var(--theme3);
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--theme3);
+  -webkit-text-stroke-width: 1px;
 }
 
 @custom-variant max_3xl {
