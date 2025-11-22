@@ -54,7 +54,7 @@ const Kontakt = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <Link
-          href="/#intro"
+          href="/kontakt"
           className="text-theme1 bg-theme3 hover:bg-theme2 hover:text-theme3 border-theme3 group mt-5 flex w-fit flex-row items-center gap-5 rounded-xl border-2 px-5 py-3 text-2xl font-bold transition-colors duration-300"
         >
           Kontakt{" "}

@@ -9,7 +9,7 @@ import ArrowUp from "./icons/ArrowUp";
 
 const Cover = () => {
   return (
-    <section className="-mt-[150px] flex h-screen flex-row items-center bg-[url('/frame-1.png')] bg-cover bg-no-repeat">
+    <section className="relative z-0 -mt-[150px] flex h-screen min-h-[950px] flex-row items-center bg-[url('/frame-1.png')] bg-cover bg-no-repeat lg:min-h-[1080px]">
       <div className="flex h-fit w-full flex-row items-center px-8 py-5 lg:px-12 xl:px-30">
         <div className="z-20 flex w-1/2 flex-col gap-4 max-[1420px]:w-[770px] max-[1420px]:justify-start max-[820px]:w-[570px] max-[620px]:w-full">
           <motion.p

@@ -49,7 +49,7 @@ const Services = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <Link
-              href="/#intro"
+              href="/usluge"
               className="bg-theme1 hover:bg-theme2 hover:text-theme3 border-theme2 hover:border-theme3 group mt-5 flex w-fit flex-row items-center gap-5 rounded-xl border-2 px-5 py-3 text-2xl font-bold text-slate-100 transition-colors duration-300"
             >
               Pogledajte više{" "}
