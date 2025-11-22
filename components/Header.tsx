@@ -59,7 +59,7 @@ const Header = () => {
           "z-100 flex max-w-screen flex-row items-center justify-between bg-blue-950/40 px-8 py-5 after:absolute after:inset-0 after:-z-1 after:backdrop-blur-xs lg:px-12 xl:px-30",
           // navHeight && "invisible max-h-0 opacity-0",
           fixedNav
-            ? "invisible fixed top-0 right-0 left-0 max-h-0 bg-[url(/frame-1.png)] bg-cover bg-repeat opacity-0"
+            ? "invisible fixed top-0 right-0 left-0 max-h-0 bg-[url(/frame-1.png)] bg-cover bg-repeat py-1.5! opacity-0"
             : "relative",
           showFixedNav &&
             "visible max-h-200 opacity-100 transition-all duration-300",
@@ -70,7 +70,7 @@ const Header = () => {
           className="font-playfair text-theme3 flex flex-row items-center gap-4 text-5xl font-bold"
         >
           <Image
-            className="rounded-full"
+            className={cn("rounded-full", fixedNav && "h-18 w-18")}
             src="/logo1.png"
             alt="plan41 logo"
             width={110}
@@ -171,7 +171,7 @@ const Header = () => {
             "xxsm:w-[260px] border-theme3 fixed top-[150px] bottom-0 left-0 z-9999 flex w-[300px] flex-col justify-between border-r-2 bg-[url(/frame-1.png)] bg-cover bg-no-repeat py-12 shadow-[inset_-50px_0_50px_-50px_var(--theme3)] transition-all duration-300 sm:w-[330px] lg:hidden",
             scrolled ? "top-0" : "top-[150px]",
             hambActive ? "translate-x-0" : "-translate-x-full",
-            fixedNav && "top-[150px]",
+            fixedNav && "top-[84px]",
           )}
         >
           <ul className="flex flex-col gap-6 text-2xl">
@@ -181,6 +181,14 @@ const Header = () => {
                 className="font-playfair relative block w-full cursor-pointer px-3 py-1 text-2xl font-bold tracking-widest text-slate-100 capitalize"
               >
                 Naslovnica
+              </Link>
+            </li>
+            <li className="w-full">
+              <Link
+                href="/o-nama"
+                className="font-playfair relative block w-full cursor-pointer px-3 py-1 text-2xl font-bold tracking-widest text-slate-100 capitalize"
+              >
+                O nama
               </Link>
             </li>
             <li className="w-full">
