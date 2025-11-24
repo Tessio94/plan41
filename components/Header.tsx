@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useEffectEvent, useRef, useState } from "react";
+import { useEffect, useEffectEvent, useState } from "react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { CgArrowLongUp } from "react-icons/cg";
@@ -11,8 +11,8 @@ import { CiInstagram, CiMail, CiMobile3 } from "react-icons/ci";
 const Header = () => {
   const [hambActive, setHambActive] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [scrollBreakpoint, setScrollBreakpoint] = useState<boolean>(false);
   const [fixedNav, setFixedNav] = useState<boolean>(false);
-  const [showFixedNav, setShowFixedNav] = useState<boolean>(false);
 
   const path = usePathname();
 
@@ -39,12 +39,11 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerWidth < 500) {
+        setScrollBreakpoint(window.scrollY > 600);
         setFixedNav(window.scrollY > 1000);
-        setShowFixedNav(window.scrollY > 1200);
-        console.log(scrollY);
       } else {
+        setScrollBreakpoint(false);
         setFixedNav(false);
-        setShowFixedNav(false);
       }
     };
 
@@ -57,12 +56,9 @@ const Header = () => {
       <header
         className={cn(
           "z-100 flex max-w-screen flex-row items-center justify-between bg-blue-950/40 px-8 py-5 after:absolute after:inset-0 after:-z-1 after:backdrop-blur-xs lg:px-12 xl:px-30",
-          // navHeight && "invisible max-h-0 opacity-0",
           fixedNav
-            ? "invisible fixed top-0 right-0 left-0 max-h-0 bg-[url(/frame-1.png)] bg-cover bg-repeat py-1.5! opacity-0"
+            ? "fixed top-0 right-0 left-0 bg-[url(/frame-1.png)] bg-cover bg-repeat py-1.5!"
             : "relative",
-          showFixedNav &&
-            "visible max-h-200 opacity-100 transition-all duration-300",
         )}
       >
         <Link
@@ -70,7 +66,7 @@ const Header = () => {
           className="font-playfair text-theme3 flex flex-row items-center gap-4 text-5xl font-bold"
         >
           <Image
-            className={cn("rounded-full", fixedNav && "h-18 w-18")}
+            className={cn("rounded-full", fixedNav && "h-13 w-13")}
             src="/logo1.png"
             alt="plan41 logo"
             width={110}
@@ -143,25 +139,33 @@ const Header = () => {
         {/* ------------------mobile navigation---------------------------- */}
         <div className="ml-auto block lg:hidden">
           <div
-            className="relative z-50 h-[35px] w-12.5 rotate-0 cursor-pointer transition-all duration-300 ease-in-out"
+            className={cn(
+              "relative z-50 h-[35px] w-12.5 rotate-0 cursor-pointer transition-all duration-300 ease-in-out",
+              scrollBreakpoint && "h-[21px] w-[25px]",
+            )}
             onClick={() => setHambActive((prev) => !prev)}
           >
             <span
               className={cn(
                 "bg-theme3 transition-300 absolute left-0 block h-[5px] w-full rounded-[9px] transition-all ease-in-out",
                 hambActive ? "top-[16px] rotate-135" : "top-0 rotate-0",
+                scrollBreakpoint && "h-[3px]",
+                fixedNav && hambActive && "top-[11px]",
               )}
             ></span>
             <span
               className={cn(
                 "bg-theme3 transition-300 absolute top-[15px] block h-[5px] w-full rotate-0 rounded-[9px] transition-all ease-in-out",
                 hambActive ? "-left-[60px] opacity-0" : "left-0 opacity-100",
+                scrollBreakpoint && "top-[9px] h-[3px]",
               )}
             ></span>
             <span
               className={cn(
                 "bg-theme3 transition-300 absolute left-0 block h-[5px] w-full rounded-[9px] transition-all ease-in-out",
                 hambActive ? "top-[16px] -rotate-135" : "top-[30px] rotate-0",
+                scrollBreakpoint && "top-[18px] h-[3px]",
+                fixedNav && hambActive && "top-[11px]",
               )}
             ></span>
           </div>
@@ -171,7 +175,7 @@ const Header = () => {
             "xxsm:w-[260px] border-theme3 fixed top-[150px] bottom-0 left-0 z-9999 flex w-[300px] flex-col justify-between border-r-2 bg-[url(/frame-1.png)] bg-cover bg-no-repeat py-12 shadow-[inset_-50px_0_50px_-50px_var(--theme3)] transition-all duration-300 sm:w-[330px] lg:hidden",
             scrolled ? "top-0" : "top-[150px]",
             hambActive ? "translate-x-0" : "-translate-x-full",
-            fixedNav && "top-[84px]",
+            fixedNav && "top-[64px]",
           )}
         >
           <ul className="flex flex-col gap-6 text-2xl">
