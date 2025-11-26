@@ -23,7 +23,7 @@ const page = () => {
           <div className="flex w-3/5 flex-col gap-10 max-[1650px]:w-1/2 max-xl:w-full">
             <div className="flex flex-col gap-5">
               <motion.p
-                className="font-inter text-2xl sm:text-3xl"
+                className="font-inter bg-theme3/20 xsm:px-5 rounded-2xl px-2.5 py-5 text-2xl italic sm:text-3xl"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
                 viewport={{ once: true, amount: 0.3 }}
