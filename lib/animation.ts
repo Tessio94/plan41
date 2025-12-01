@@ -8,12 +8,29 @@ export const cardContainer = {
   },
 };
 
+export const cardContainer2 = {
+  visible: {
+    transition: {
+      delayChildren: stagger(0.5),
+    },
+  },
+};
+
 export const cardVariants = {
   hidden: { opacity: 0, y: 100 },
   visible: {
     y: 0,
     opacity: 1,
     transition: { duration: 0.5, easingIn: easeIn },
+  },
+};
+
+export const cardVariants2 = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 1, easingIn: easeIn },
   },
 };
 

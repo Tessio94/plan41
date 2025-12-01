@@ -1,10 +1,22 @@
+"use client";
+
 import React from "react";
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
+import { cardContainer, cardVariants } from "@/lib/animation";
+import { useMediaQuery } from "usehooks-ts";
+
+const inViewProps = {
+  initial: "hidden",
+  whileInView: "visible",
+  viewport: { once: true, amount: 0.7 },
+};
 
 const ServiceTypes = () => {
+  const matches = useMediaQuery("(min-width: 768px)");
+
   return (
     <>
       <div className="bg-background2 px-6 py-26 sm:px-10 lg:px-18 2xl:px-28">
@@ -27,8 +39,16 @@ const ServiceTypes = () => {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3">
-            <div className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70">
+          <motion.div
+            className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3"
+            {...(matches ? inViewProps : {})}
+            variants={matches ? cardContainer : undefined}
+          >
+            <motion.div
+              className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+              {...(matches ? {} : inViewProps)}
+              variants={cardVariants}
+            >
               <div className="group-hover:border-theme3 rounded-full border-b-4 border-transparent p-1 pb-3.5 transition-all duration-300">
                 <Image
                   src="/ikone/startup.svg"
@@ -42,8 +62,12 @@ const ServiceTypes = () => {
                 <strong className="text-theme3">HZZ</strong> radi ostvarenje
                 poticaja za samozapošljavanje
               </p>
-            </div>
-            <div className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70">
+            </motion.div>
+            <motion.div
+              className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+              {...(matches ? {} : inViewProps)}
+              variants={cardVariants}
+            >
               <div className="group-hover:border-theme3 rounded-full border-b-4 border-transparent p-1 pb-3.5 transition-all duration-300">
                 <Image
                   src="/ikone/insurance.svg"
@@ -60,8 +84,12 @@ const ServiceTypes = () => {
                 <strong className="text-theme3">Erste</strong> banke
                 Poduzetnički starter
               </p>
-            </div>
-            <div className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70 md:ml-[50%] xl:ml-0">
+            </motion.div>
+            <motion.div
+              className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70 md:ml-[50%] xl:ml-0"
+              {...(matches ? {} : inViewProps)}
+              variants={cardVariants}
+            >
               <div className="group-hover:border-theme3 rounded-full border-b-4 border-transparent p-1 pb-3.5 transition-all duration-300">
                 <Image
                   src="/ikone/mentorship.svg"
@@ -74,8 +102,8 @@ const ServiceTypes = () => {
                 Mentorski program - uvod poduzetniku početniku u svijet
                 poduzetništva
               </p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
       <div className="bg-background px-6 py-26 sm:px-10 lg:px-18 2xl:px-28">
@@ -90,7 +118,16 @@ const ServiceTypes = () => {
           </motion.h3>
           <div className="relative flex w-full flex-col justify-between gap-6 lg:flex-row xl:gap-16">
             <div className="flex w-full grow flex-col items-start gap-5 lg:w-1/2 xl:gap-10">
-              <div className="border-theme1 shadow-blue-950/50l group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70">
+              <motion.div
+                className="border-theme1 shadow-blue-950/50l group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                  transition: { duration: 1 },
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <div className="group-hover:border-theme3 rounded-full border-b-4 border-transparent p-1 pb-3.5 transition-all duration-300">
                   <Image
                     src="/ikone/financing.svg"
@@ -102,8 +139,13 @@ const ServiceTypes = () => {
                 <p className="font-inter text-2xl">
                   Pomoć u osiguranju najpovoljnijeg načina financiranja
                 </p>
-              </div>
-              <div className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70">
+              </motion.div>
+              <motion.div
+                className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <div className="group-hover:border-theme3 rounded-full border-b-4 border-transparent p-1 pb-3.5 transition-all duration-300">
                   <Image
                     src="/ikone/documents.svg"
@@ -115,11 +157,11 @@ const ServiceTypes = () => {
                 <p className="font-inter text-2xl">
                   Izrada poslovnih planova i investicijskih elaborata
                 </p>
-              </div>
+              </motion.div>
               <motion.div
                 className="max_3xl:mt-5 absolute right-0 bottom-0 z-20 max-[530px]:right-1/2 max-[530px]:bottom-[23%] max-[530px]:mt-0! max-[530px]:translate-x-[50%] max-[490px]:bottom-[21%] max-[440px]:bottom-[20%] max-[390px]:bottom-[18%] max-[370px]:bottom-[16%] lg:relative"
-                initial={{ x: 50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
                 viewport={{ once: true, amount: 0.3 }}
               >
                 <Link

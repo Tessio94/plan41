@@ -57,8 +57,9 @@ const Intro2 = () => {
               />
               <p className="flex flex-col gap-3">
                 <span className="text-2xl font-bold">Jasna vizija</span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                cumque.
+                Pomažem poduzetnicima oblikovati jasnu i ostvarivu viziju rasta,
+                definirajući ciljeve koji su usklađeni s njihovim potencijalom i
+                tržišnim prilikama.
               </p>
             </motion.li>
             <motion.li
@@ -75,8 +76,9 @@ const Intro2 = () => {
               />
               <p className="flex flex-col gap-3">
                 <span className="text-2xl font-bold">Struktura</span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                cumque.
+                Razvijam jasne procese i strukture koje omogućuju učinkovitu
+                organizaciju, bolju internu koordinaciju i stabilan temelj za
+                razvoj poslovanja.
               </p>
             </motion.li>
             <motion.li
@@ -93,8 +95,9 @@ const Intro2 = () => {
               />
               <p className="flex flex-col gap-3">
                 <span className="text-2xl font-bold">Podrška</span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                cumque.
+                Kroz kontinuiranu podršku i partnerski pristup pomažem vam
+                prevladati izazove, održati fokus i brže postići željene
+                rezultate.
               </p>
             </motion.li>
           </ul>

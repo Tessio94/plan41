@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
 import * as motion from "motion/react-client";
 import Banner from "@/components/Banner";
 import Image from "next/image";
 import ClipPathIcons from "@/components/icons/ClipPathIcons";
 import { GiCheckMark } from "react-icons/gi";
+import { cardContainer2, cardVariants2 } from "@/lib/animation";
 
 const page = () => {
   return (
@@ -23,20 +26,15 @@ const page = () => {
           <div className="flex w-3/5 flex-col gap-10 max-[1650px]:w-1/2 max-xl:w-full">
             <div className="flex flex-col gap-5">
               <motion.p
-                className="font-inter bg-theme3/20 xsm:px-5 rounded-2xl px-2.5 py-5 text-2xl italic sm:text-3xl"
+                className="font-inter bg-theme3/20 xsm:px-5 rounded-2xl px-2.5 py-5 text-2xl font-semibold sm:text-3xl"
                 initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
-                viewport={{ once: true, amount: 0.3 }}
+                animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
               >
                 Zovem se{" "}
                 <strong className="text-theme3">Davorka Lazanja</strong>. Iza
                 mene je <strong className="text-theme3">30 godina</strong>{" "}
-                iskustva u{" "}
-                <span className="underline">
-                  financijama, poslovnom savjetovanju i razvoju poduzetničkih
-                  projekata
-                </span>
-                .
+                iskustva u financijama, poslovnom savjetovanju i razvoju
+                poduzetničkih projekata.
               </motion.p>
               <motion.p
                 className="font-inter text-2xl sm:text-3xl"
@@ -82,7 +80,12 @@ const page = () => {
             </motion.p>
           </div>
           <div className="max-[600px]:max-w-[90%]">
-            <div className="relative w-fit">
+            <motion.div
+              className="relative w-fit"
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               <Image
                 src="/financije5.1_50.jpg"
                 className="relative z-30 rounded-2xl shadow-lg"
@@ -91,7 +94,7 @@ const page = () => {
                 height={500}
               />
               <div className="t-10 absolute top-10 -right-10 bottom-0 left-10 h-full rounded-2xl bg-[url(/frame-1.png)] bg-cover bg-no-repeat shadow-lg shadow-blue-950"></div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -99,71 +102,104 @@ const page = () => {
         <div className="bg-theme1 w-full px-6 py-26 sm:px-10 lg:px-18 xl:w-1/2 2xl:px-28">
           <motion.h3
             className="font-playfair after:bg-theme3 before:bg-theme3 relative mb-15 text-5xl font-bold text-slate-100 before:absolute before:top-[calc(113%-4px)] before:left-23 before:h-3 before:w-3 before:rotate-45 before:content-[''] after:absolute after:top-[113%] after:left-0 after:h-[5px] after:w-23 after:content-['']"
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1, transition: { duration: 1.5 } }}
             viewport={{ once: true, amount: 0.3 }}
           >
             Vizija
           </motion.h3>
-          <ul className="flex flex-col gap-15">
-            <li className="font-inter flex flex-row items-center gap-5 text-slate-100">
+          <motion.ul
+            className="flex flex-col gap-15"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardContainer2}
+          >
+            <motion.li
+              className="font-inter flex flex-row items-center gap-5 text-slate-100"
+              variants={cardVariants2}
+            >
               <GiCheckMark className="shrink-0 text-4xl" />
               <p className="text-2xl font-semibold sm:text-3xl">
                 Iskoristiti znanje stečeno dugogodišnjim iskustvom u pomoći
                 razvoju poduzetništva, mentoriranju i poticanju na rast
               </p>
-            </li>
-            <li className="font-inter flex flex-row items-center gap-5 text-slate-100">
+            </motion.li>
+            <motion.li
+              className="font-inter flex flex-row items-center gap-5 text-slate-100"
+              variants={cardVariants2}
+            >
               <GiCheckMark className="shrink-0 text-4xl" />
               <p className="text-2xl font-semibold sm:text-3xl">
                 Težiti tome da svaka osoba s poduzetničkom idejom dobije
                 podršku, znanje i samopouzdanje potrebno za njezinu realizaciju.
               </p>
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </div>
         <div className="bg-background2 w-full px-6 py-26 sm:px-10 lg:px-18 xl:w-1/2 2xl:px-28">
           <motion.h3
             className="font-playfair after:bg-theme3 before:bg-theme3 relative mb-15 text-5xl font-bold before:absolute before:top-[calc(113%-4px)] before:left-25 before:h-3 before:w-3 before:rotate-45 before:content-[''] after:absolute after:top-[113%] after:left-0 after:h-[5px] after:w-25 after:content-['']"
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1, transition: { duration: 1.5 } }}
             viewport={{ once: true, amount: 0.3 }}
           >
             Ciljevi
           </motion.h3>
-          <ul className="flex flex-col gap-15">
-            <li className="font-inter flex flex-row items-center gap-5">
+          <motion.ul
+            className="flex flex-col gap-15"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={cardContainer2}
+          >
+            <motion.li
+              className="font-inter flex flex-row items-center gap-5"
+              variants={cardVariants2}
+            >
               <GiCheckMark className="shrink-0 text-4xl" />
               <p className="text-2xl font-semibold sm:text-3xl">
                 Jačati poduzetničku klimu i stvarati pozitivno poduzetničko
                 okruženje
               </p>
-            </li>
-            <li className="font-inter flex flex-row items-center gap-5">
+            </motion.li>
+            <motion.li
+              className="font-inter flex flex-row items-center gap-5"
+              variants={cardVariants2}
+            >
               <GiCheckMark className="shrink-0 text-4xl" />
               <p className="text-2xl font-semibold sm:text-3xl">
                 Potpora nezaposlenim osoba pri samozapošljavanju
               </p>
-            </li>
-            <li className="font-inter flex flex-row items-center gap-5">
+            </motion.li>
+            <motion.li
+              className="font-inter flex flex-row items-center gap-5"
+              variants={cardVariants2}
+            >
               <GiCheckMark className="shrink-0 text-4xl" />
               <p className="text-2xl font-semibold sm:text-3xl">
                 Informiranje i savjetovanje poduzetnika
               </p>
-            </li>
-            <li className="font-inter flex flex-row items-center gap-5">
+            </motion.li>
+            <motion.li
+              className="font-inter flex flex-row items-center gap-5"
+              variants={cardVariants2}
+            >
               <GiCheckMark className="shrink-0 text-4xl" />
               <p className="text-2xl font-semibold sm:text-3xl">
                 Pomoć u edukaciji poduzetnika i onih koji to namjeravaju postati
               </p>
-            </li>
-            <li className="font-inter flex flex-row items-center gap-5">
+            </motion.li>
+            <motion.li
+              className="font-inter flex flex-row items-center gap-5"
+              variants={cardVariants2}
+            >
               <GiCheckMark className="shrink-0 text-4xl" />
               <p className="text-2xl font-semibold sm:text-3xl">
                 Financijsko osvješćivanje
               </p>
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </div>
       </div>
       <Banner type="o-nama" />
