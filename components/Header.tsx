@@ -67,7 +67,7 @@ const Header = () => {
         >
           <Image
             className={cn("rounded-full", fixedNav && "h-13 w-13")}
-            src="/logo1.png"
+            src="/simeSALJI4.svg"
             alt="plan41 logo"
             width={110}
             height={110}
