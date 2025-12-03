@@ -6,7 +6,7 @@ import KontaktForma from "@/components/KontaktForma";
 
 const page = () => {
   return (
-    <section className="-mt-[150px]">
+    <section className="-mt-[148px]">
       <div className="bg-[url(/frame-1.png)] bg-cover bg-no-repeat px-6 pt-[254px] pb-26 sm:px-10 lg:px-18 2xl:px-28">
         <motion.h1
           className="font-playfair after:bg-theme3 before:bg-theme3 relative text-6xl font-bold text-slate-100 before:absolute before:top-[calc(105%-4px)] before:left-25 before:h-3 before:w-3 before:rotate-45 before:content-[''] after:absolute after:top-[105%] after:left-0 after:h-[5px] after:w-25 after:content-['']"
@@ -44,7 +44,7 @@ const page = () => {
               <p className="font-inter text-4xl font-semibold">Mobitel</p>
               <a
                 href="tel:+385957269444"
-                className="after:bg-theme1 font-playfair relative inline-block text-3xl after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0"
+                className="after:bg-theme1 font-playfair relative inline-block text-3xl after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0 focus:after:right-0 active:after:right-0"
               >
                 +385 95 726 94 44
               </a>
@@ -65,7 +65,7 @@ const page = () => {
               <p className="font-inter text-4xl font-semibold">E-mail</p>
               <a
                 href="mailto:info@plan41.hr"
-                className="after:bg-theme1 font-playfair relative inline-block text-3xl after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0"
+                className="after:bg-theme1 font-playfair relative inline-block text-3xl after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0 focus:after:right-0 active:after:right-0"
               >
                 info@plan41.hr
               </a>

@@ -50,10 +50,10 @@ const Services = () => {
           >
             <Link
               href="/usluge"
-              className="bg-theme1 hover:bg-theme2 hover:text-theme3 border-theme2 hover:border-theme3 group mt-5 flex w-fit flex-row items-center gap-5 rounded-xl border-2 px-5 py-3 text-2xl font-bold text-slate-100 transition-colors duration-300"
+              className="bg-theme1 hover:bg-theme2 hover:text-theme3 active:bg-theme2 active:text-theme3 focus:bg-theme2 focus:text-theme3 border-theme2 hover:border-theme3 active:border-theme3 focus:border-theme3 group mt-5 flex w-fit flex-row items-center gap-5 rounded-xl border-2 px-5 py-3 text-2xl font-bold text-slate-100 transition-colors duration-300"
             >
               Pogledajte više{" "}
-              <FaArrowRight className="transition-translate duration-300 group-hover:translate-x-1.5" />
+              <FaArrowRight className="transition-translate duration-300 group-hover:translate-x-1.5 group-focus:translate-x-1.5 group-active:translate-x-1.5" />
             </Link>
           </motion.div>
         </div>

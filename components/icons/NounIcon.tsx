@@ -8,7 +8,7 @@ const NounIcon = ({ type, page = "" }: { type: string; page?: string }) => {
         className={cn(
           page === "o-nama"
             ? "fill-theme1 top-50% absolute h-36 w-36 sm:left-10 lg:left-18 2xl:left-28"
-            : "fill-theme1 stroke-theme1 group-hover:bg-theme3 absolute top-2 right-[15%] h-18 w-18 rounded-full bg-transparent p-2 transition-all duration-300",
+            : "fill-theme1 stroke-theme1 group-hover:bg-theme3 group-active:bg-theme3 group-focus:bg-theme3 absolute top-2 right-[15%] h-18 w-18 rounded-full bg-transparent p-2 transition-all duration-300",
         )}
         strokeWidth={6}
         version="1.1"
@@ -24,7 +24,7 @@ const NounIcon = ({ type, page = "" }: { type: string; page?: string }) => {
         className={cn(
           page === "o-nama"
             ? "fill-theme1 left:50% absolute top-10 h-36 w-36"
-            : "fill-theme1 stroke-theme1 group-hover:bg-theme3 absolute top-3 right-[15%] h-18 w-18 rounded-2xl bg-transparent p-1 transition-all duration-300",
+            : "fill-theme1 stroke-theme1 group-hover:bg-theme3 group-active:bg-theme3 group-focus:bg-theme3 absolute top-3 right-[15%] h-18 w-18 rounded-2xl bg-transparent p-1 transition-all duration-300",
         )}
         strokeWidth={6}
         version="1.1"
@@ -40,7 +40,7 @@ const NounIcon = ({ type, page = "" }: { type: string; page?: string }) => {
         className={cn(
           page === "o-nama"
             ? "fill-theme1 top-50% absolute h-36 w-36 sm:right-10 lg:right-18 2xl:right-28"
-            : "fill-theme1 stroke-theme1 group-hover:bg-theme3 absolute top-2 right-[15%] h-16 w-16 rounded-2xl bg-transparent p-1 transition-all duration-300",
+            : "fill-theme1 stroke-theme1 group-hover:bg-theme3 group-active:bg-theme3 group-focus:bg-theme3 absolute top-2 right-[15%] h-16 w-16 rounded-2xl bg-transparent p-1 transition-all duration-300",
         )}
         strokeWidth={6}
         version="1.1"
@@ -56,7 +56,7 @@ const NounIcon = ({ type, page = "" }: { type: string; page?: string }) => {
         className={cn(
           page === "o-nama"
             ? "fill-theme1 left:50% absolute bottom-10 h-36 w-36"
-            : "fill-theme1 stroke-theme1 group-hover:bg-theme3 absolute top-3 right-[15%] h-16 w-16 rounded-2xl bg-transparent p-1 transition-all duration-300",
+            : "fill-theme1 stroke-theme1 group-hover:bg-theme3 group-active:bg-theme3 group-focus:bg-theme3 absolute top-3 right-[15%] h-16 w-16 rounded-2xl bg-transparent p-1 transition-all duration-300",
         )}
         strokeWidth={6}
         version="1.1"

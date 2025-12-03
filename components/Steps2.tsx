@@ -53,13 +53,13 @@ export default function Steps2() {
             <p className="font-playfair absolute top-3.5 left-12 text-[34px] font-bold">
               Ideja
             </p>
-            <div className="card bg-theme1 transition-translate absolute inset-0 z-20 duration-300 group-hover:translate-y-2.5"></div>
-            <div className="card-border absolute inset-0 z-20 bg-blue-50 transition-colors duration-300 group-hover:bg-blue-100">
+            <div className="card bg-theme1 transition-translate absolute inset-0 z-20 duration-300 group-hover:translate-y-2.5 group-focus:translate-y-2.5 group-active:translate-y-2.5"></div>
+            <div className="card-border absolute inset-0 z-20 bg-blue-50 transition-colors duration-300 group-hover:bg-blue-100 group-focus:bg-blue-100 group-active:bg-blue-100">
               <NounIcon type="idea" />
               <div className="mt-[25%] flex flex-col gap-2 py-6 pr-3 pl-6">
                 <p className="text-2xl">
                   Svaka dobra{" "}
-                  <strong className="group-hover:text-theme3 transition-colors duration-300">
+                  <strong className="group-hover:text-theme3 group-focus:text-theme3 group-active:text-theme3 transition-colors duration-300">
                     ideja
                   </strong>{" "}
                   počinje razumijevanjem problema i vjerom u rješenje.
@@ -74,13 +74,13 @@ export default function Steps2() {
             <p className="font-playfair max_3xl:text-[30px] max_3xl:top-4.5 max_2sm:text-[28px]! max_2sm:top-4.5! max_sm:text-[32px]! max_xsm:text-[30px]! absolute top-3.5 left-2 text-[32px] font-bold max-2xl:top-3.5! max-2xl:text-[32px]!">
               Struktura
             </p>
-            <div className="card bg-theme1 transition-translate absolute inset-0 z-20 duration-300 group-hover:translate-y-2.5"></div>
-            <div className="card-border absolute inset-0 z-20 bg-blue-50 transition-colors duration-300 group-hover:bg-blue-100">
+            <div className="card bg-theme1 transition-translate absolute inset-0 z-20 duration-300 group-hover:translate-y-2.5 group-focus:translate-y-2.5 group-active:translate-y-2.5"></div>
+            <div className="card-border absolute inset-0 z-20 bg-blue-50 transition-colors duration-300 group-hover:bg-blue-100 group-focus:bg-blue-100 group-active:bg-blue-100">
               <NounIcon type="structure" />
               <div className="mt-[25%] flex flex-col gap-2 py-6 pr-3 pl-6">
                 <p className="text-2xl">
                   Jasna{" "}
-                  <strong className="group-hover:text-theme3 transition-colors duration-300">
+                  <strong className="group-hover:text-theme3 group-focus:text-theme3 group-active:text-theme3 transition-colors duration-300">
                     struktura
                   </strong>{" "}
                   organizacije omogućuje efikasnost, odgovornosti i bolju timsku
@@ -96,12 +96,12 @@ export default function Steps2() {
             <p className="font-playfair absolute top-3.5 left-13 text-[34px] font-bold">
               Plan
             </p>
-            <div className="card bg-theme1 transition-translate absolute inset-0 z-20 duration-300 group-hover:translate-y-2.5"></div>
-            <div className="card-border absolute inset-0 z-20 bg-blue-50 transition-colors duration-300 group-hover:bg-blue-100">
+            <div className="card bg-theme1 transition-translate absolute inset-0 z-20 duration-300 group-hover:translate-y-2.5 group-focus:translate-y-2.5 group-active:translate-y-2.5"></div>
+            <div className="card-border absolute inset-0 z-20 bg-blue-50 transition-colors duration-300 group-hover:bg-blue-100 group-focus:bg-blue-100 group-active:bg-blue-100">
               <NounIcon type="plan" />
               <div className="mt-[25%] flex flex-col gap-2 py-6 pr-3 pl-6">
                 <p className="text-2xl">
-                  <strong className="group-hover:text-theme3 transition-colors duration-300">
+                  <strong className="group-hover:text-theme3 group-focus:text-theme3 group-active:text-theme3 transition-colors duration-300">
                     Plan
                   </strong>{" "}
                   mora definirati ciljeve, rokove, resurse i jasno mjerljive
@@ -118,13 +118,13 @@ export default function Steps2() {
             <p className="font-playfair max_3xl:left-9 absolute top-3.5 left-11 text-[34px] font-bold">
               Akcija
             </p>
-            <div className="card bg-theme1 transition-translate absolute inset-0 z-20 duration-300 group-hover:translate-y-2.5"></div>
-            <div className="card-border absolute inset-0 z-20 bg-blue-50 transition-colors duration-300 group-hover:bg-blue-100">
+            <div className="card bg-theme1 transition-translate absolute inset-0 z-20 duration-300 group-hover:translate-y-2.5 group-focus:translate-y-2.5 group-active:translate-y-2.5"></div>
+            <div className="card-border absolute inset-0 z-20 bg-blue-50 transition-colors duration-300 group-hover:bg-blue-100 group-focus:bg-blue-100 group-active:bg-blue-100">
               <NounIcon type="action" />
               <div className="mt-[25%] flex flex-col gap-2 py-6 pr-3 pl-6">
                 <p className="text-2xl">
                   Brza{" "}
-                  <strong className="group-hover:text-theme3 transition-colors duration-300">
+                  <strong className="group-hover:text-theme3 group-focus:text-theme3 group-active:text-theme3 transition-colors duration-300">
                     akcija
                   </strong>{" "}
                   uz mjerenje rezultata vodi do održivog poslovnog rasta.

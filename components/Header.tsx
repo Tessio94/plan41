@@ -7,12 +7,16 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { CgArrowLongUp } from "react-icons/cg";
 import { CiInstagram, CiMail, CiMobile3 } from "react-icons/ci";
+import LogoOptions from "./LogoOptions";
+import { useProjectInfo } from "@/context/ProjectContext";
 
 const Header = () => {
   const [hambActive, setHambActive] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [scrollBreakpoint, setScrollBreakpoint] = useState<boolean>(false);
   const [fixedNav, setFixedNav] = useState<boolean>(false);
+
+  const { logo } = useProjectInfo();
 
   const path = usePathname();
 
@@ -61,13 +65,14 @@ const Header = () => {
             : "relative",
         )}
       >
+        <LogoOptions fixed={fixedNav} />
         <Link
           href="/"
           className="font-playfair text-theme3 flex flex-row items-center gap-4 text-5xl font-bold"
         >
           <Image
             className={cn("rounded-full", fixedNav && "h-13 w-13")}
-            src="/simeSALJI4.svg"
+            src={logo}
             alt="plan41 logo"
             width={110}
             height={110}

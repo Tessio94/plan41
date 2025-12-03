@@ -9,7 +9,7 @@ import ArrowUp from "./icons/ArrowUp";
 
 const Cover = () => {
   return (
-    <section className="relative z-0 -mt-[150px] flex h-screen min-h-[950px] flex-row items-center bg-[url('/frame-1.png')] bg-cover bg-no-repeat lg:min-h-[1080px]">
+    <section className="relative z-0 -mt-[148px] flex h-screen min-h-[950px] flex-row items-center bg-[url('/frame-1.png')] bg-cover bg-no-repeat lg:min-h-[1080px]">
       <div className="flex h-fit w-full flex-row items-center px-8 py-5 lg:px-12 xl:px-30">
         <div className="z-20 flex w-1/2 flex-col gap-4 max-[1420px]:w-[770px] max-[1420px]:justify-start max-[820px]:w-[570px] max-[620px]:w-full">
           <motion.p
@@ -51,17 +51,17 @@ const Cover = () => {
           >
             <Link
               href="/#intro"
-              className="bg-theme2 hover:bg-theme1 hover:text-theme3 border-theme2 hover:border-theme3 group mt-5 flex w-fit flex-row items-center gap-5 rounded-2xl border-2 px-5 py-3 text-2xl font-bold text-slate-100 transition-colors duration-300 max-[530px]:mt-2"
+              className="bg-theme2 hover:bg-theme1 hover:text-theme3 active:bg-theme1 active:text-theme3 focus:bg-theme1 focus:text-theme3 border-theme2 hover:border-theme3 group mt-5 flex w-fit flex-row items-center gap-5 rounded-2xl border-2 px-5 py-3 text-2xl font-bold text-slate-100 transition-colors duration-300 max-[530px]:mt-2"
             >
               Pogledaj više{" "}
-              <FaArrowDown className="transition-translate duration-300 group-hover:translate-y-1.5" />
+              <FaArrowDown className="transition-translate duration-300 group-hover:translate-y-1.5 group-focus:translate-y-1.5 group-active:translate-y-1.5" />
             </Link>
             <Link
               href="/usluge"
-              className="bg-theme3 border-theme3 hover:bg-background2 hover:text-theme3 group mt-5 flex w-fit flex-row items-center gap-5 rounded-2xl border-2 px-5 py-3 text-2xl font-bold text-slate-100 transition-colors duration-300 max-[530px]:mt-0"
+              className="bg-theme3 border-theme3 hover:bg-background2 hover:text-theme3 active:bg-background2 active:text-theme3 focus:bg-background2 focus:text-theme3 group mt-5 flex w-fit flex-row items-center gap-5 rounded-2xl border-2 px-5 py-3 text-2xl font-bold text-slate-100 transition-colors duration-300 max-[530px]:mt-0"
             >
               Usluge{" "}
-              <FaArrowRight className="transition-translate duration-300 group-hover:translate-x-1.5" />
+              <FaArrowRight className="transition-translate duration-300 group-hover:translate-x-1.5 group-focus:translate-x-1.5 group-active:translate-x-1.5" />
             </Link>
           </motion.div>
         </div>

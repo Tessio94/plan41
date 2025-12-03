@@ -108,10 +108,10 @@ const Vision = () => {
             >
               <Link
                 href="/o-nama"
-                className="text-theme1 bg-theme3 hover:text-theme3 hover:bg-theme1 border-theme3 group mx-auto mt-5 flex w-fit flex-row items-center gap-5 rounded-xl border-2 px-5 py-3 text-2xl font-bold transition-colors duration-300"
+                className="text-theme1 bg-theme3 hover:text-theme3 hover:bg-theme1 focus:text-theme3 focus:bg-theme1 active:text-theme3 active:bg-theme1 border-theme3 group mx-auto mt-5 flex w-fit flex-row items-center gap-5 rounded-xl border-2 px-5 py-3 text-2xl font-bold transition-colors duration-300"
               >
                 O nama{" "}
-                <FaArrowRight className="transition-translate duration-300 group-hover:translate-x-1.5" />
+                <FaArrowRight className="transition-translate duration-300 group-hover:translate-x-1.5 group-focus:translate-x-1.5 group-active:translate-x-1.5" />
               </Link>
             </motion.div>
           </div>
