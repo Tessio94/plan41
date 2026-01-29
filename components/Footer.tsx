@@ -3,11 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { CiInstagram, CiLocationOn, CiMail, CiMobile3 } from "react-icons/ci";
-import { useProjectInfo } from "@/context/ProjectContext";
 
 const Footer = () => {
-  const { logo } = useProjectInfo();
-
   return (
     <footer className="flex flex-col items-center justify-between gap-8 bg-[url('/frame-1.png')] bg-cover bg-no-repeat px-8 py-10 lg:flex-row lg:gap-0 lg:px-12 xl:px-30">
       <a href="#">
