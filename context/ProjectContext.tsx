@@ -3,17 +3,17 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 
 interface ProjectContextType {
-  logo: string;
-  setLogo: (logo: string) => void;
+  service: string | null;
+  setService: (service: string | null) => void;
 }
 
 const ProjectContext = createContext<ProjectContextType | null>(null);
 
 export const ProjectProvider = ({ children }: { children: ReactNode }) => {
-  const [logo, setLogo] = useState<string>("/logoProp1.svg");
+  const [service, setService] = useState<string | null>(null);
 
   return (
-    <ProjectContext.Provider value={{ logo, setLogo }}>
+    <ProjectContext.Provider value={{ service, setService }}>
       {children}
     </ProjectContext.Provider>
   );

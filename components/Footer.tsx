@@ -13,7 +13,7 @@ const Footer = () => {
       <a href="#">
         <Image
           className="rounded-full"
-          src={logo}
+          src="/logo.svg"
           alt="plan41 logo"
           width={150}
           height={150}

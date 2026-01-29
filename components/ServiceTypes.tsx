@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import { cardContainer, cardVariants } from "@/lib/animation";
 import { useMediaQuery } from "usehooks-ts";
+import { useProjectInfo } from "@/context/ProjectContext";
 
 const inViewProps = {
   initial: "hidden",
@@ -16,6 +17,8 @@ const inViewProps = {
 
 const ServiceTypes = () => {
   const matches = useMediaQuery("(min-width: 768px)");
+
+  const { setService } = useProjectInfo();
 
   return (
     <>
@@ -37,6 +40,13 @@ const ServiceTypes = () => {
               Želite li ući u svijet poduzetništva, krenite od onoga u čemu ste
               autentični.
             </motion.p>
+            <motion.p
+              className="font-inter text-lg italic"
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+            >
+              *Klikni na karticu za više detalja
+            </motion.p>
           </div>
 
           <motion.div
@@ -45,9 +55,10 @@ const ServiceTypes = () => {
             variants={matches ? cardContainer : undefined}
           >
             <motion.div
-              className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+              className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
               {...(matches ? {} : inViewProps)}
               variants={cardVariants}
+              onClick={() => setService("s1")}
             >
               <div className="group-hover:border-theme3 rounded-full border-b-4 border-transparent p-1 pb-3.5 transition-all duration-300">
                 <Image
@@ -59,14 +70,15 @@ const ServiceTypes = () => {
               </div>
               <p className="font-inter text-2xl">
                 Pomoć u izradi poslovnih planova i prijava na{" "}
-                <strong className="text-theme3">HZZ</strong> radi ostvarenje
+                <strong className="text-theme3">HZZ</strong> radi ostvarenja
                 poticaja za samozapošljavanje
               </p>
             </motion.div>
             <motion.div
-              className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+              className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
               {...(matches ? {} : inViewProps)}
               variants={cardVariants}
+              onClick={() => setService("s2")}
             >
               <div className="group-hover:border-theme3 rounded-full border-b-4 border-transparent p-1 pb-3.5 transition-all duration-300">
                 <Image
@@ -86,9 +98,10 @@ const ServiceTypes = () => {
               </p>
             </motion.div>
             <motion.div
-              className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70 md:ml-[50%] xl:ml-0"
+              className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70 md:ml-[50%] xl:ml-0"
               {...(matches ? {} : inViewProps)}
               variants={cardVariants}
+              onClick={() => setService("s3")}
             >
               <div className="group-hover:border-theme3 rounded-full border-b-4 border-transparent p-1 pb-3.5 transition-all duration-300">
                 <Image
@@ -119,7 +132,7 @@ const ServiceTypes = () => {
           <div className="relative flex w-full flex-col justify-between gap-6 lg:flex-row xl:gap-16">
             <div className="flex w-full grow flex-col items-start gap-5 lg:w-1/2 xl:gap-10">
               <motion.div
-                className="border-theme1 shadow-blue-950/50l group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+                className="border-theme1 shadow-blue-950/50l group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{
                   x: 0,
@@ -127,6 +140,7 @@ const ServiceTypes = () => {
                   transition: { duration: 1 },
                 }}
                 viewport={{ once: true, amount: 0.3 }}
+                onClick={() => setService("s4")}
               >
                 <div className="group-hover:border-theme3 rounded-full border-b-4 border-transparent p-1 pb-3.5 transition-all duration-300">
                   <Image
@@ -141,10 +155,11 @@ const ServiceTypes = () => {
                 </p>
               </motion.div>
               <motion.div
-                className="border-theme1 group flex w-full flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+                className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
                 viewport={{ once: true, amount: 0.3 }}
+                onClick={() => setService("s5")}
               >
                 <div className="group-hover:border-theme3 rounded-full border-b-4 border-transparent p-1 pb-3.5 transition-all duration-300">
                   <Image

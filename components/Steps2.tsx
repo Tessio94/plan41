@@ -58,11 +58,11 @@ export default function Steps2() {
               <NounIcon type="idea" />
               <div className="mt-[25%] flex flex-col gap-2 py-6 pr-3 pl-6">
                 <p className="text-2xl">
-                  Svaka dobra{" "}
                   <strong className="group-hover:text-theme3 group-focus:text-theme3 group-active:text-theme3 transition-colors duration-300">
-                    ideja
+                    Ideja
                   </strong>{" "}
-                  počinje razumijevanjem problema i vjerom u rješenje.
+                  je početak promjene – trenutak kada iskustvo i vizija postaju
+                  poslovna prilika
                 </p>
               </div>
             </div>
@@ -79,12 +79,8 @@ export default function Steps2() {
               <NounIcon type="structure" />
               <div className="mt-[25%] flex flex-col gap-2 py-6 pr-3 pl-6">
                 <p className="text-2xl">
-                  Jasna{" "}
-                  <strong className="group-hover:text-theme3 group-focus:text-theme3 group-active:text-theme3 transition-colors duration-300">
-                    struktura
-                  </strong>{" "}
-                  organizacije omogućuje efikasnost, odgovornosti i bolju timsku
-                  koordinaciju.
+                  Stabilni temelji koji ideju čine provedivom, mjerljivom i
+                  održivom
                 </p>
               </div>
             </div>
@@ -104,8 +100,8 @@ export default function Steps2() {
                   <strong className="group-hover:text-theme3 group-focus:text-theme3 group-active:text-theme3 transition-colors duration-300">
                     Plan
                   </strong>{" "}
-                  mora definirati ciljeve, rokove, resurse i jasno mjerljive
-                  korake.
+                  je most između vizije i rezultata - definira ciljeve, resurse
+                  i rokove
                 </p>
               </div>
             </div>
@@ -123,11 +119,8 @@ export default function Steps2() {
               <NounIcon type="action" />
               <div className="mt-[25%] flex flex-col gap-2 py-6 pr-3 pl-6">
                 <p className="text-2xl">
-                  Brza{" "}
-                  <strong className="group-hover:text-theme3 group-focus:text-theme3 group-active:text-theme3 transition-colors duration-300">
-                    akcija
-                  </strong>{" "}
-                  uz mjerenje rezultata vodi do održivog poslovnog rasta.
+                  Idemo do kraja – provođenje odluka koje plan pretvaraju u
+                  željeni rezultat
                 </p>
               </div>
             </div>

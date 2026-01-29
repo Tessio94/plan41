@@ -87,7 +87,7 @@ const page = () => {
               viewport={{ once: true, amount: 0.3 }}
             >
               <Image
-                src="/financije5.1_50.jpg"
+                src="/profilna.jpg"
                 className="relative z-30 rounded-2xl shadow-lg"
                 alt="financije slika"
                 width={500}
@@ -169,7 +169,7 @@ const page = () => {
             >
               <GiCheckMark className="shrink-0 text-4xl" />
               <p className="text-2xl font-semibold sm:text-3xl">
-                Potpora nezaposlenim osoba pri samozapošljavanju
+                Potpora nezaposlenim osobama pri samozapošljavanju
               </p>
             </motion.li>
             <motion.li

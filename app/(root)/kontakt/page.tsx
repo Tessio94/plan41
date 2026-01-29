@@ -3,6 +3,7 @@ import * as motion from "motion/react-client";
 import { CiLocationOn, CiMail, CiMobile3 } from "react-icons/ci";
 import Location from "@/components/Location";
 import KontaktForma from "@/components/KontaktForma";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -76,7 +77,17 @@ const page = () => {
 
       <div className="bg-background2 w-full px-6 py-26 sm:px-10 lg:px-18 lg:py-42 2xl:px-28">
         <div className="flex w-full flex-col items-center justify-between gap-15 lg:h-160 lg:flex-row lg:gap-0">
-          <Location />
+          <div className="lg:rounded-r-0 order-2 h-140 w-full grow overflow-hidden rounded-l-2xl rounded-r-2xl bg-[url(/financije5.3_50.jpg)] bg-cover bg-no-repeat max-[550px]:h-fit max-[550px]:bg-none max-md:bg-position-[40%] lg:order-1 lg:h-full lg:rounded-r-none lg:bg-position-[50%] xl:bg-position-[20%]">
+            <Image
+              className="hidden rounded-2xl max-[550px]:block"
+              src="/financije5.1_50.jpg"
+              alt="laptop plan41"
+              width={500}
+              height={500}
+            />
+          </div>
+          {/* <Location /> */}
+
           <KontaktForma />
         </div>
       </div>
