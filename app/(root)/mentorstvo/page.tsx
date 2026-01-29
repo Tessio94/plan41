@@ -232,7 +232,7 @@ const page = () => {
                 banke
               </p>
             </div>
-            <div className="bg-theme1/10 border-theme1 flex w-full flex-col gap-5 rounded-2xl border p-6 shadow-xl">
+            <div className="bg-theme1/10 border-theme1 flex w-full flex-col gap-5 place-self-start rounded-2xl border p-6 shadow-xl">
               <h5 className="font-inter mb-5 text-4xl font-semibold underline">
                 Prilagođeni program
               </h5>
