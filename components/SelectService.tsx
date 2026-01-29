@@ -60,9 +60,7 @@ const SelectService = () => {
                 obrazložiti održivost vašeg projekta — sve kako bi vaš zahtjev
                 imao najbolje šanse za odobrenje.
               </p>
-              <h5 className="text-2xl text-slate-100">
-                Dodatne informacije vezane uz tu uslugu
-              </h5>
+
               <p className="text-xl text-slate-100">
                 Hrvatski zavod za zapošljavanje (HZZ) i u 2026. godini
                 dodjeljuje potpore za samozapošljavanje osobama koje žele

@@ -172,16 +172,13 @@ const page = () => {
 
               <ul className="ml-5 flex list-disc flex-col gap-5">
                 <li>
-                  <p className="font-inter text-3xl">Pasivni prihodi</p>
-                </li>
-                <li>
                   <p className="font-inter text-3xl">
-                    Osnovni pojmovi i vrste pasivnih prihoda
+                    Analiza preduvjeta za ostvarenje pasivnih prihoda
                   </p>
                 </li>
                 <li>
                   <p className="font-inter text-3xl">
-                    osnovni zakonodavni okvir
+                    Osnovni pojmovi i vrste pasivnih prihoda
                   </p>
                 </li>
               </ul>
