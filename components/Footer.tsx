@@ -30,9 +30,9 @@ const Footer = () => {
 
           <a
             href="tel:+385957269444"
-            className="after:bg-theme1 font-playfair relative inline-block after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0"
+            className="font-playfair relative inline-block after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:bg-slate-100 after:transition-all after:duration-500 after:content-[''] hover:after:right-0"
           >
-            +385 95 726 94 44
+            +385 95 72 69 444
           </a>
         </p>
         <p className="font-playfair flex flex-row items-start gap-4 text-2xl text-slate-100">
@@ -40,7 +40,7 @@ const Footer = () => {
 
           <a
             href="mailto:info@plan41.hr"
-            className="after:bg-theme1 font-playfair relative inline-block after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0"
+            className="font-playfair relative inline-block after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:bg-slate-100 after:transition-all after:duration-500 after:content-[''] hover:after:right-0"
           >
             info@plan41.hr
           </a>

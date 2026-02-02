@@ -124,17 +124,17 @@ const Header = () => {
         </nav>
         <div className="hidden flex-col lg:flex">
           <a
-            href="tel:+385 99 312 4867"
+            href="tel:+385 95 72 69 444"
             className="text-heading1 font-playfair hover:border-theme3 border-b-none bg-theme2 text-background border-theme1 hover:bg-background hover:text-theme1 flex cursor-pointer items-center gap-1 rounded-2xl rounded-b-none border-2 py-1 pr-9 pl-3 text-xl font-semibold tracking-wider transition-all duration-300 xl:gap-2"
           >
             <CiMobile3 className="text-heading1 ml-[-3px] text-2xl" />
             <span className="after:bg-theme1 font-mont relative inline-block after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0">
-              099 312 4867
+              095 72 69 444
             </span>
           </a>
 
           <a
-            href="mailto:info@nlstech.pro"
+            href="mailto:info@plan41.hr"
             className="text-heading1 font-playfair bg-theme3 text-background border-theme3 hover:bg-background hover:text-theme3 ml-0 flex cursor-pointer items-center gap-1 rounded-2xl rounded-t-none border-2 px-3 py-1 text-xl font-semibold tracking-wider transition-all duration-300 xl:gap-2"
           >
             <CiMail className="text-heading1 text-2xl" />
@@ -236,7 +236,7 @@ const Header = () => {
                 className="font-playfair flex cursor-pointer items-center gap-2 text-xl tracking-wider text-slate-100 capitalize"
               >
                 <CiMobile3 className="text-theme3 text-3xl" />
-                095 726 94 44
+                095 72 69 444
               </a>
             </div>
             <div className="px-3 py-1 transition-all duration-500">

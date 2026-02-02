@@ -47,7 +47,7 @@ const page = () => {
                 href="tel:+385957269444"
                 className="after:bg-theme1 font-playfair relative inline-block text-3xl after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0 focus:after:right-0 active:after:right-0"
               >
-                +385 95 726 94 44
+                +385 95 72 69 444
               </a>
             </div>
           </div>

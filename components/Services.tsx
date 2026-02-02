@@ -80,7 +80,7 @@ const Services = () => {
             height={180}
           />
           <ul className="bg-background2 absolute top-0 left-0 z-10 rounded-t-2xl rounded-b-2xl">
-            <li
+            {/* <li
               className="border-theme1 to-theme2/40 hover:from-theme2/10 hover:to-theme2/60 group cursor-pointer rounded-t-2xl border-2 border-b-0 bg-linear-to-br from-transparent px-5 py-3 transition-colors duration-500 hover:bg-linear-to-br"
               onClick={() =>
                 dropdown !== "d1" ? setDropdown("d1") : setDropdown("")
@@ -110,9 +110,9 @@ const Services = () => {
                   pružam i podršku u pregovorima s kreditorima.
                 </p>
               </div>
-            </li>
+            </li> */}
             <li
-              className="border-theme1 to-theme2/40 hover:from-theme2/10 hover:to-theme2/60 group cursor-pointer border-2 border-b-0 bg-linear-to-br from-transparent px-5 py-3 transition-colors duration-500 hover:bg-linear-to-br"
+              className="border-theme1 to-theme2/40 hover:from-theme2/10 hover:to-theme2/60 group cursor-pointer rounded-t-2xl border-2 border-b-0 bg-linear-to-br from-transparent px-5 py-3 transition-colors duration-500 hover:bg-linear-to-br"
               onClick={() =>
                 dropdown !== "d2" ? setDropdown("d2") : setDropdown("")
               }
@@ -135,10 +135,10 @@ const Services = () => {
                 )}
               >
                 <p className="pt-2 text-lg">
-                  Izrađujem poslovne planove, investicijske studije i analize
-                  isplativosti koje služe kao temelj za donošenje odluka,
-                  apliciranje na kredite il Uz stručnu pripremu dokumentacije,
-                  pružam i podršku u pregovorima s kreditorima.
+                  Kroz poslovne planove, investicijske studije i analize
+                  isplativosti pretvaram ideju u mjerljive brojke – kako biste
+                  sigurnije donosili odluke i imali kvalitetnu dokumentaciju za
+                  financiranje i ulaganja.
                 </p>
               </div>
             </li>
