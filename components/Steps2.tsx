@@ -3,8 +3,17 @@ import * as motion from "motion/react-client";
 import ClipPathIcons from "./icons/ClipPathIcons";
 import NounIcon from "./icons/NounIcon";
 import { cardContainer, cardVariants } from "@/lib/animation";
+import { useMediaQuery } from "usehooks-ts";
+
+const inViewProps = {
+  initial: "hidden",
+  whileInView: "visible",
+  viewport: { once: true, amount: 0.3 },
+};
 
 export default function Steps2() {
+  const matches = useMediaQuery("(min-width: 640px)");
+
   return (
     <section className="bg-background px-6 py-26 sm:px-10 lg:px-18 2xl:px-28">
       <ClipPathIcons />
@@ -41,13 +50,12 @@ export default function Steps2() {
       <div className="">
         <motion.div
           className="grid place-items-center gap-10 sm:grid-cols-2 2xl:grid-cols-4"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={cardContainer}
+          {...(matches ? inViewProps : {})}
+          variants={matches ? cardContainer : undefined}
         >
           <motion.div
             className="group relative z-20 h-75 min-h-70 w-full max-w-85 min-w-70 rounded-br-2xl shadow-[30px_30px_30px_#0041772f]"
+            {...(matches ? {} : inViewProps)}
             variants={cardVariants}
           >
             <p className="font-playfair absolute top-3.5 left-12 text-[34px] font-bold">
@@ -69,6 +77,7 @@ export default function Steps2() {
           </motion.div>
           <motion.div
             className="group relative z-20 h-75 min-h-70 w-full max-w-85 min-w-70 rounded-br-2xl shadow-[30px_30px_30px_#0041772f]"
+            {...(matches ? {} : inViewProps)}
             variants={cardVariants}
           >
             <p className="font-playfair max_3xl:text-[30px] max_3xl:top-4.5 max_2sm:text-[28px]! max_2sm:top-4.5! max_sm:text-[32px]! max_xsm:text-[30px]! absolute top-3.5 left-2 text-[32px] font-bold max-2xl:top-3.5! max-2xl:text-[32px]!">
@@ -87,6 +96,7 @@ export default function Steps2() {
           </motion.div>
           <motion.div
             className="group relative z-20 h-75 min-h-70 w-full max-w-85 min-w-70 rounded-br-2xl shadow-[30px_30px_30px_#0041772f]"
+            {...(matches ? {} : inViewProps)}
             variants={cardVariants}
           >
             <p className="font-playfair absolute top-3.5 left-13 text-[34px] font-bold">
@@ -109,6 +119,7 @@ export default function Steps2() {
 
           <motion.div
             className="group relative z-20 h-75 min-h-70 w-full max-w-85 min-w-70 rounded-br-2xl shadow-[30px_30px_30px_#0041772f]"
+            {...(matches ? {} : inViewProps)}
             variants={cardVariants}
           >
             <p className="font-playfair max_3xl:left-9 absolute top-3.5 left-11 text-[34px] font-bold">
