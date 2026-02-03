@@ -1,9 +1,32 @@
 import React from "react";
+import Image from "next/image";
+import { Metadata } from "next";
 import * as motion from "motion/react-client";
 import { CiLocationOn, CiMail, CiMobile3 } from "react-icons/ci";
-import Location from "@/components/Location";
 import KontaktForma from "@/components/KontaktForma";
-import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Kontakt | Plan41 – Poslovno savjetovanje Zadar",
+  description:
+    "Imate poslovnu ideju ili trebate savjet, mentorstvo ili podršku? Javite se i dogovorite razgovor. Plan41 – pouzdano poslovno savjetovanje u Zadru.",
+  openGraph: {
+    title: "Kontakt | Plan41",
+    description:
+      "Kontaktirajte Plan41 i napravite prvi korak prema jasno definiranoj poslovnoj ideji i održivom rastu.",
+    url: "https://www.plan41.hr/kontakt",
+    siteName: "Plan 41",
+    images: [
+      {
+        url: "https://www.plan41.hr/og-plan41.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kontakt – Plan 41",
+      },
+    ],
+    locale: "hr_HR",
+    type: "website",
+  },
+};
 
 const page = () => {
   return (

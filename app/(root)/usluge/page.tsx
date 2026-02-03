@@ -1,7 +1,31 @@
 import React from "react";
+import { Metadata } from "next";
 import * as motion from "motion/react-client";
 import SelectService from "@/components/SelectService";
 import ServiceTypes from "@/components/ServiceTypes";
+
+export const metadata: Metadata = {
+  title: "Usluge | Plan41 – Podrška poduzetnicima i startupima",
+  description:
+    "Plan41 nudi savjetovanje, mentorstvo i izradu poslovnih planova za startupe i poduzetnike. Pomoć pri financiranju, poticajima i održivom rastu poslovanja.",
+  openGraph: {
+    title: "Usluge | Plan41",
+    description:
+      "Savjetovanje, mentorstvo i praktična podrška za poduzetnike – od prve ideje do stabilnog poslovanja.",
+    url: "https://www.plan41.hr/usluge",
+    siteName: "Plan 41",
+    images: [
+      {
+        url: "https://www.plan41.hr/og-plan41.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Usluge poslovnog savjetovanja – Plan 41",
+      },
+    ],
+    locale: "hr_HR",
+    type: "website",
+  },
+};
 
 const page = () => {
   return (

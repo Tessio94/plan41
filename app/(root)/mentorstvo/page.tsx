@@ -1,7 +1,30 @@
 import React from "react";
-import * as motion from "motion/react-client";
-import { cardContainer2, cardVariants2 } from "@/lib/animation";
 import Image from "next/image";
+import * as motion from "motion/react-client";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mentorstvo za poduzetnike | Plan 41 Zadar",
+  description:
+    "Mentorski programi za poduzetnike i one koji to žele postati. Kroz jasnu viziju, strukturu i kontinuiranu podršku pomažem pretvoriti ideje u održive projekte.",
+  openGraph: {
+    title: "Mentorstvo za poduzetnike | Plan 41",
+    description:
+      "Kroz mentorstvo, znanje i partnerski pristup pomažem poduzetnicima izgraditi stabilno i održivo poslovanje.",
+    url: "https://www.plan41.hr/mentorstvo",
+    siteName: "Plan 41",
+    images: [
+      {
+        url: "https://www.plan41.hr/og-plan41.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mentorstvo za poduzetnike – Plan 41",
+      },
+    ],
+    locale: "hr_HR",
+    type: "website",
+  },
+};
 
 const page = () => {
   return (

@@ -1,41 +1,23 @@
 "use client";
 
 import React, { useState } from "react";
-
-import {
-  IoLocationSharp,
-  IoLogoInstagram,
-  IoMail,
-  IoPhonePortraitSharp,
-} from "react-icons/io5";
-// import { Toaster, toast } from "sonner";
+import { Toaster, toast } from "sonner";
 
 const KontaktForma = () => {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
-  const onFormSubmitted = async (e: React.FormEvent) => {
+  const onFormSubmitted = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
       e.preventDefault();
+      const form = e.currentTarget;
+      const formData = new FormData(e.currentTarget);
+
       setLoading(true);
       const res = await fetch("/api/send-email", {
         method: "POST",
         cache: "no-cache",
-        body: JSON.stringify({
-          name,
-          lastName,
-          phone,
-          email,
-          message,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
+        body: formData,
       });
       if (!res.ok) {
         if (res.status === 400) {
@@ -53,33 +35,29 @@ const KontaktForma = () => {
       const result = await res.json();
       console.log("data", result);
 
-      setName("");
-      setLastName("");
-      setPhone("");
-      setEmail("");
-      setMessage("");
+      form.reset();
       setSuccess(true);
       setLoading(false);
-      // toast.success(result.message);
+      toast.success(result.message);
     } catch (err) {
       if (err instanceof Error) {
         setSuccess(false);
         setLoading(false);
-        // toast.error(<div dangerouslySetInnerHTML={{ __html: err.message }} />);
+        toast.error(<div dangerouslySetInnerHTML={{ __html: err.message }} />);
       }
     }
   };
 
   return (
     <>
-      {/* <Toaster
-				toastOptions={{
-					style: {
-						color: success ? "#22c55e" : "#ef4444",
-						border: success ? "2px solid #22c55e" : "2px solid #ef4444",
-					},
-				}}
-			/> */}
+      <Toaster
+        toastOptions={{
+          style: {
+            color: success ? "#22c55e" : "#ef4444",
+            border: success ? "2px solid #22c55e" : "2px solid #ef4444",
+          },
+        }}
+      />
 
       <div className="shadow-theme1/60 order-1 h-full rounded-2xl bg-[url(/frame-1.png)] bg-cover bg-no-repeat p-5 shadow-lg sm:rounded-4xl sm:p-10 lg:order-2 lg:h-fit lg:w-[750px]">
         <h2 className="font-playfair after:bg-theme3 before:bg-theme3 relative mb-15 text-4xl font-bold text-slate-100 before:absolute before:top-[calc(105%-4px)] before:left-25 before:h-3 before:w-3 before:rotate-45 before:content-[''] after:absolute after:top-[105%] after:left-0 after:h-[5px] after:w-25 after:content-['']">
@@ -89,6 +67,13 @@ const KontaktForma = () => {
           className="flex w-full flex-col gap-7 lg:gap-10"
           onSubmit={onFormSubmitted}
         >
+          <input
+            type="text"
+            name="company"
+            tabIndex={-1}
+            autoComplete="off"
+            style={{ display: "none" }}
+          />
           <div className="flex w-full items-center gap-4">
             <div className="flex basis-1/2 flex-col items-start">
               <label
@@ -102,8 +87,6 @@ const KontaktForma = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
                 required
               />
             </div>
@@ -119,8 +102,6 @@ const KontaktForma = () => {
                 type="text"
                 id="lastname"
                 name="lastname"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
                 required
               />
             </div>
@@ -137,8 +118,6 @@ const KontaktForma = () => {
               type="tel"
               id="phone"
               name="phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
               required
             />
           </div>
@@ -154,8 +133,6 @@ const KontaktForma = () => {
               type="email"
               id="email"
               name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -173,8 +150,6 @@ const KontaktForma = () => {
               rows={4}
               cols={50}
               placeholder="Napišite vaš zahtjev ovdje..."
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
               required
             ></textarea>
           </div>

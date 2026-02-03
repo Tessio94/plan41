@@ -88,6 +88,39 @@ export const metadata: Metadata = {
   title: "Plan41 | Poslovno savjetovanje Zadar",
   description:
     "Plan41 nudi stručne savjetodavne usluge za startupe i poduzetnike u Zadru. Od razvoja poslovnih strategija do podrške u pokretanju i rastu poslovanja.",
+  openGraph: {
+    title: "Plan41 | Poslovno savjetovanje Zadar",
+    description:
+      "Kroz mentorstvo, znanje i partnerski pristup pomažem poduzetnicima izgraditi stabilno i održivo poslovanje.",
+    url: "https://www.plan41.hr",
+    siteName: "Plan 41",
+    images: [
+      {
+        url: "https://www.plan41.hr/og-plan41.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mentorstvo za poduzetnike – Plan 41",
+      },
+    ],
+    locale: "hr_HR",
+    type: "website",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Plan 41",
+  url: "https://www.plan41.hr",
+  logo: "https://www.plan41.hr/logo.svg",
+};
+
+const jsonLdPro = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Plan 41",
+  url: "https://www.plan41.hr",
+  logo: "https://www.plan41.hr/logo.svg",
 };
 
 export default function RootLayout({
