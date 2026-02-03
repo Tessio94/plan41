@@ -9,7 +9,20 @@ import ArrowUp from "./icons/ArrowUp";
 
 const Cover = () => {
   return (
-    <section className="relative z-0 -mt-[148px] flex h-screen min-h-[950px] flex-row items-center bg-[url('/frame-1.png')] bg-cover bg-no-repeat lg:min-h-[1080px]">
+    <section className="relative z-0 -mt-[148px] flex h-screen min-h-[950px] flex-row items-center lg:min-h-[1080px]">
+      <Image
+        src="/frame-1.png"
+        alt="Blue cover background"
+        fill
+        preload={true}
+        // loading="eager"
+        // fetchPriority="high"
+        sizes="100vw"
+        quality={100}
+        className="-z-10 object-cover"
+      />
+
+      {/* <section className="relative z-0 -mt-[148px] flex h-screen min-h-[950px] flex-row items-center bg-[url('/frame-1.png')] bg-cover bg-no-repeat lg:min-h-[1080px]"> */}
       <div className="flex h-fit w-full flex-row items-center px-8 py-5 lg:px-12 xl:px-30">
         <div className="z-20 flex w-1/2 flex-col gap-4 max-[1420px]:w-[770px] max-[1420px]:justify-start max-[820px]:w-[570px] max-[620px]:w-full">
           <motion.p
@@ -79,6 +92,8 @@ const Cover = () => {
                 alt="financije slika"
                 width={500}
                 height={563}
+                loading="eager"
+                fetchPriority="high"
               />
             </motion.div>
             <motion.div
