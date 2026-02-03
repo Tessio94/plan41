@@ -63,7 +63,7 @@ const page = () => {
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
               >
-                <p className="font-inter text-3xl">
+                <p className="font-inter text-2xl sm:text-3xl">
                   <span className="font-bold">Zašto mentorstvo?</span>{" "}
                   Jedinstvena prilika izlaska iz uobičajenog kruga prijatelja i
                   kolega, razvoj kritičkog razmišljanja, otvaranja novih
@@ -74,7 +74,7 @@ const page = () => {
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
               >
-                <p className="font-inter text-3xl">
+                <p className="font-inter text-2xl sm:text-3xl">
                   <span className="font-bold">Čemu služi mentorstvo?</span>{" "}
                   Osobnom razvoju, širenju znanja, motiviranju, poticanju,
                   umrežavanju, poticanju samostalnog razmišljanja i donošenja
@@ -85,7 +85,7 @@ const page = () => {
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1, transition: { duration: 1 } }}
               >
-                <p className="font-inter text-3xl">
+                <p className="font-inter text-2xl sm:text-3xl">
                   <span className="font-bold">
                     Što je nužno za mentorski program?
                   </span>{" "}
@@ -116,10 +116,10 @@ const page = () => {
 
           <div className="grid items-stretch gap-8 lg:grid-cols-2 2xl:grid-cols-3">
             <div className="bg-theme1/10 border-theme1 flex w-full flex-col gap-5 rounded-2xl border p-6 shadow-xl">
-              <h5 className="font-inter mb-5 text-4xl font-semibold underline">
+              <h5 className="font-inter mb-5 text-3xl font-semibold underline sm:text-4xl">
                 Osnove poduzetništva – Prvi koraci koji čine razliku
               </h5>
-              <p className="font-inter text-3xl">
+              <p className="font-inter text-2xl sm:text-3xl">
                 Modul je namijenjen ambicioznim i motiviranim osobama koje
                 preuzimaju odgovornost za svoje odluke i traže mentorsku
                 podršku, a ne gotova rješenja. Postavljanje čvrstih temelja
@@ -128,31 +128,31 @@ const page = () => {
 
               <ul className="ml-5 flex list-disc flex-col gap-5">
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     razlike poslovnih modela
                   </p>
                 </li>
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     uloge i odgovornosti poduzetnika
                   </p>
                 </li>
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     osnovni zakonodavni okvir
                   </p>
                 </li>
               </ul>
-              <p className="font-inter text-3xl">
+              <p className="font-inter text-2xl sm:text-3xl">
                 <span className="font-semibold">Cilj modula:</span> siguran
                 ulazak u poduzetništvo
               </p>
             </div>
             <div className="bg-theme1/10 border-theme1 flex w-full flex-col gap-5 rounded-2xl border p-6 shadow-xl">
-              <h5 className="font-inter mb-5 text-4xl font-semibold underline">
+              <h5 className="font-inter mb-5 text-3xl font-semibold underline sm:text-4xl">
                 Profitabilnost, cijene i poslovni ciljevi
               </h5>
-              <p className="font-inter text-3xl">
+              <p className="font-inter text-2xl sm:text-3xl">
                 Rad na postavljanju{" "}
                 <span className="font-semibold">
                   realnih i održivih poslovnih ciljeva
@@ -162,50 +162,50 @@ const page = () => {
 
               <ul className="ml-5 flex list-disc flex-col gap-5">
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     definiranje cilja zadovoljavajuće profitabilnosti
                   </p>
                 </li>
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     razumijevanje strukture troškova
                   </p>
                 </li>
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     formiranje cijena proizvoda ili usluga
                   </p>
                 </li>
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     tumačenje financijskih pokazatelja
                   </p>
                 </li>
               </ul>
 
-              <p className="font-inter text-3xl">
+              <p className="font-inter text-2xl sm:text-3xl">
                 <span className="font-semibold">Cilj modula:</span> osigurati da
                 poslovanje bude profitabilno u skladu sa očekivanjima
               </p>
             </div>
             <div className="bg-theme1/10 border-theme1 flex w-full flex-col gap-5 rounded-2xl border p-6 shadow-xl">
-              <h5 className="font-inter mb-5 text-4xl font-semibold underline">
+              <h5 className="font-inter mb-5 text-3xl font-semibold underline sm:text-4xl">
                 Pasivni prihodi
               </h5>
 
               <ul className="ml-5 flex list-disc flex-col gap-5">
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     Analiza preduvjeta za ostvarenje pasivnih prihoda
                   </p>
                 </li>
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     Osnovni pojmovi i vrste pasivnih prihoda
                   </p>
                 </li>
               </ul>
-              <p className="font-inter text-3xl">
+              <p className="font-inter text-2xl sm:text-3xl">
                 <span className="font-semibold">Cilj modula:</span>{" "}
                 razumijevanje opcija pasivnih prihoda, njihovih prednosti i
                 ograničenja, kako bi mogli pravovremeno donositi odluke koje
@@ -213,50 +213,50 @@ const page = () => {
               </p>
             </div>
             <div className="bg-theme1/10 border-theme1 flex w-full flex-col gap-5 rounded-2xl border p-6 shadow-xl">
-              <h5 className="font-inter mb-5 text-4xl font-semibold underline">
+              <h5 className="font-inter mb-5 text-3xl font-semibold underline sm:text-4xl">
                 Investiranje i financiranje
               </h5>
-              <p className="font-inter text-3xl">
+              <p className="font-inter text-2xl sm:text-3xl">
                 Kada je pravi trenutak za investiranje i kako ga financirati
               </p>
 
               <ul className="ml-5 flex list-disc flex-col gap-5">
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     prepoznavanje pravog trenutka za investiciju u odnosu na
                     fazu poslovanja
                   </p>
                 </li>
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     unutarnji i vanjski izvori financiranja
                   </p>
                 </li>
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     utjecaj investicije i financiranja na likvidnost, stabilnost
                     i rizik poslovanja
                   </p>
                 </li>
                 <li>
-                  <p className="font-inter text-3xl">
+                  <p className="font-inter text-2xl sm:text-3xl">
                     priprema poslovanja i financijske dokumentacije za razgovore
                     s bankama, investitorima ili institucijama
                   </p>
                 </li>
               </ul>
 
-              <p className="font-inter text-3xl">
+              <p className="font-inter text-2xl sm:text-3xl">
                 <span className="font-semibold">Cilj modula:</span> Razumjeti
                 financijski i poslovni učinak investicije te način procjene
                 banke
               </p>
             </div>
             <div className="bg-theme1/10 border-theme1 flex w-full flex-col gap-5 place-self-start rounded-2xl border p-6 shadow-xl">
-              <h5 className="font-inter mb-5 text-4xl font-semibold underline">
+              <h5 className="font-inter mb-5 text-3xl font-semibold underline sm:text-4xl">
                 Prilagođeni program
               </h5>
-              <p className="font-inter text-3xl">
+              <p className="font-inter text-2xl sm:text-3xl">
                 Program je prilagođen vašim potrebama i ciljevima
               </p>
             </div>
