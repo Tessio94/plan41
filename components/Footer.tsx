@@ -49,7 +49,7 @@ const Footer = () => {
           <a
             href="https://www.instagram.com/plan41/"
             target="_blank"
-            aria-label="NLS Tech on Instagram - Footer social link"
+            aria-label="Plan 41 on Instagram - Footer social link"
             className="group"
           >
             <CiInstagram className="text-theme3 text-3xl transition-all duration-300 hover:scale-110 hover:text-slate-100" />
