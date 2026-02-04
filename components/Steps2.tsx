@@ -1,8 +1,9 @@
 "use client";
-import * as motion from "motion/react-client";
+
 import ClipPathIcons from "./icons/ClipPathIcons";
 import NounIcon from "./icons/NounIcon";
 import { cardContainer, cardVariants } from "@/lib/animation";
+import { motion } from "motion/react";
 import { useMediaQuery } from "usehooks-ts";
 
 const inViewProps = {

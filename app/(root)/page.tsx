@@ -1,6 +1,6 @@
 import Cover from "@/components/Cover";
 import Intro2 from "@/components/Intro2";
-import Steps2 from "@/components/Steps2";
+import Steps3 from "@/components/Steps3";
 import Services from "@/components/Services";
 import Vision from "@/components/Vision";
 import Kontakt from "@/components/Kontakt";
@@ -28,7 +28,7 @@ const page = () => {
       <main>
         <Cover />
         <Intro2 />
-        <Steps2 />
+        <Steps3 />
         <Vision />
         <Services />
         <Kontakt />

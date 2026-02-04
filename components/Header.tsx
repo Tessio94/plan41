@@ -180,7 +180,7 @@ const Header = () => {
         </div>
         <nav
           className={cn(
-            "xxsm:w-[260px] border-theme3 fixed top-[150px] bottom-0 left-0 z-9999 flex w-[300px] flex-col justify-between border-r-2 bg-[url(/frame-1.png)] bg-cover bg-no-repeat py-12 shadow-[inset_-50px_0_50px_-50px_var(--theme3)] transition-all duration-300 sm:w-[330px] lg:hidden",
+            "xxsm:w-[260px] border-theme3 fixed top-[150px] bottom-0 left-0 z-9999 flex w-[300px] flex-col justify-between border-r-2 bg-[url(/frame-1-mobile.jpg)] bg-cover bg-no-repeat py-12 shadow-[inset_-50px_0_50px_-50px_var(--theme3)] transition-all duration-300 sm:w-[330px] sm:bg-[url(/frame-1-tablet.jpg)] lg:hidden",
             scrolled ? "top-0" : "top-[150px]",
             hambActive ? "translate-x-0" : "-translate-x-full",
             fixedNav && "top-[64px]",
