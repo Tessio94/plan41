@@ -12,7 +12,7 @@ const inViewProps = {
   viewport: { once: true, amount: 0.3 },
 };
 
-export default function Steps2() {
+export default function Steps3() {
   const matches = useMediaQuery("(min-width: 640px)");
 
   return (

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import { CiInstagram, CiLocationOn, CiMail, CiMobile3 } from "react-icons/ci";

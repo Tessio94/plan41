@@ -18,7 +18,7 @@ const Cover = () => {
         // loading="eager"
         // fetchPriority="high"
         sizes="100vw"
-        quality={100}
+        quality={75}
         className="-z-10 object-cover"
       />
 
