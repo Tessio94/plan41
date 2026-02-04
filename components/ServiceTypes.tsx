@@ -55,7 +55,7 @@ const ServiceTypes = () => {
             variants={matches ? cardContainer : undefined}
           >
             <motion.div
-              className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+              className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.jpg)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
               {...(matches ? {} : inViewProps)}
               variants={cardVariants}
               onClick={() => setService("s1")}
@@ -75,7 +75,7 @@ const ServiceTypes = () => {
               </p>
             </motion.div>
             <motion.div
-              className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+              className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.jpg)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
               {...(matches ? {} : inViewProps)}
               variants={cardVariants}
               onClick={() => setService("s2")}
@@ -98,7 +98,7 @@ const ServiceTypes = () => {
               </p>
             </motion.div>
             <motion.div
-              className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70 md:ml-[50%] xl:ml-0"
+              className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.jpg)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70 md:ml-[50%] xl:ml-0"
               {...(matches ? {} : inViewProps)}
               variants={cardVariants}
               onClick={() => setService("s3")}
@@ -132,7 +132,7 @@ const ServiceTypes = () => {
           <div className="relative flex w-full flex-col justify-between gap-6 lg:flex-row xl:gap-16">
             <div className="flex w-full grow flex-col items-start gap-5 lg:w-1/2 xl:gap-10">
               <motion.div
-                className="border-theme1 shadow-blue-950/50l group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+                className="border-theme1 shadow-blue-950/50l group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.jpg)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{
                   x: 0,
@@ -155,7 +155,7 @@ const ServiceTypes = () => {
                 </p>
               </motion.div>
               <motion.div
-                className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.png)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
+                className="border-theme1 group flex w-full cursor-pointer flex-col items-start gap-1 rounded-2xl border-2 bg-[url(/frame-1.jpg)] p-8 text-xl text-slate-100 shadow-xl shadow-blue-950/50 transition-shadow duration-300 hover:shadow-blue-950/70"
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
                 viewport={{ once: true, amount: 0.3 }}

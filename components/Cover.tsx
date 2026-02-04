@@ -11,7 +11,7 @@ const Cover = () => {
   return (
     <section className="relative z-0 -mt-[148px] flex h-screen min-h-[950px] flex-row items-center lg:min-h-[1080px]">
       <Image
-        src="/frame-1.png"
+        src="/frame-1.jpg"
         alt="Blue cover background"
         fill
         preload={true}

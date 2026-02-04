@@ -6,7 +6,7 @@ import { CiInstagram, CiLocationOn, CiMail, CiMobile3 } from "react-icons/ci";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center justify-between gap-8 bg-[url('/frame-1.png')] bg-cover bg-no-repeat px-8 py-10 lg:flex-row lg:gap-0 lg:px-12 xl:px-30">
+    <footer className="flex flex-col items-center justify-between gap-8 bg-[url('/frame-1.jpg')] bg-cover bg-no-repeat px-8 py-10 lg:flex-row lg:gap-0 lg:px-12 xl:px-30">
       <a href="#">
         <Image
           className="rounded-full"

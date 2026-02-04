@@ -57,7 +57,7 @@ const Header = () => {
         className={cn(
           "z-100 flex max-w-screen flex-row items-center justify-between bg-blue-950/40 px-8 py-5 after:absolute after:inset-0 after:-z-1 after:backdrop-blur-xs lg:px-12 xl:px-30",
           fixedNav
-            ? "fixed top-0 right-0 left-0 bg-[url(/frame-1.png)] bg-cover bg-repeat py-1.5!"
+            ? "fixed top-0 right-0 left-0 bg-[url(/frame-1.jpg)] bg-cover bg-repeat py-1.5!"
             : "relative",
         )}
       >

@@ -59,7 +59,7 @@ const KontaktForma = () => {
         }}
       />
 
-      <div className="shadow-theme1/60 order-1 h-full rounded-2xl bg-[url(/frame-1.png)] bg-cover bg-no-repeat p-5 shadow-lg sm:rounded-4xl sm:p-10 lg:order-2 lg:h-fit lg:w-[750px]">
+      <div className="shadow-theme1/60 order-1 h-full rounded-2xl bg-[url(/frame-1.jpg)] bg-cover bg-no-repeat p-5 shadow-lg sm:rounded-4xl sm:p-10 lg:order-2 lg:h-fit lg:w-[750px]">
         <h2 className="font-playfair after:bg-theme3 before:bg-theme3 relative mb-15 text-4xl font-bold text-slate-100 before:absolute before:top-[calc(105%-4px)] before:left-25 before:h-3 before:w-3 before:rotate-45 before:content-[''] after:absolute after:top-[105%] after:left-0 after:h-[5px] after:w-25 after:content-['']">
           Pošaljite upit
         </h2>

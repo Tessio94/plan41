@@ -31,7 +31,7 @@ const SelectService = () => {
           onClick={() => setService(null)}
         >
           <div
-            className="flex h-full w-full max-w-[90%] flex-col rounded-2xl bg-[url(/frame-1.png)] max-[450px]:max-w-[95%] sm:max-w-[80%] xl:max-w-[60%]"
+            className="flex h-full w-full max-w-[90%] flex-col rounded-2xl bg-[url(/frame-1.jpg)] max-[450px]:max-w-[95%] sm:max-w-[80%] xl:max-w-[60%]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative flex shrink-0 flex-col items-start justify-center gap-5 border-b border-slate-100 px-5 py-5 sm:flex-row sm:items-end sm:pr-16">
@@ -184,7 +184,7 @@ const SelectService = () => {
           onClick={() => setService(null)}
         >
           <div
-            className="flex h-full w-full max-w-[90%] flex-col rounded-2xl bg-[url(/frame-1.png)] max-[450px]:max-w-[95%] sm:max-w-[80%] xl:max-w-[60%]"
+            className="flex h-full w-full max-w-[90%] flex-col rounded-2xl bg-[url(/frame-1.jpg)] max-[450px]:max-w-[95%] sm:max-w-[80%] xl:max-w-[60%]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative flex shrink-0 flex-col items-start justify-center gap-5 border-b border-slate-100 px-5 py-5 sm:flex-row sm:items-end sm:pr-16">
@@ -251,7 +251,7 @@ const SelectService = () => {
           className="bg-background/10 fixed inset-0 z-1000 flex items-center justify-center py-[5%] backdrop-blur-xs"
           onClick={() => setService(null)}
         >
-          <div className="w-fu max-[450px]:max-w-[95%]ll flex h-full max-w-[90%] flex-col rounded-2xl bg-[url(/frame-1.png)] sm:max-w-[80%] xl:max-w-[60%]">
+          <div className="w-fu max-[450px]:max-w-[95%]ll flex h-full max-w-[90%] flex-col rounded-2xl bg-[url(/frame-1.jpg)] sm:max-w-[80%] xl:max-w-[60%]">
             <div className="relative flex shrink-0 flex-col items-start justify-center gap-5 border-b border-slate-100 px-5 py-5 sm:flex-row sm:items-end sm:pr-16">
               <Image
                 src="/ikone/mentorship.svg"
@@ -306,7 +306,7 @@ const SelectService = () => {
           className="bg-background/10 fixed inset-0 z-1000 flex items-center justify-center py-[5%] backdrop-blur-xs"
           onClick={() => setService(null)}
         >
-          <div className="w-fu max-[450px]:max-w-[95%]ll flex h-full max-w-[90%] flex-col rounded-2xl bg-[url(/frame-1.png)] sm:max-w-[80%] xl:max-w-[60%]">
+          <div className="w-fu max-[450px]:max-w-[95%]ll flex h-full max-w-[90%] flex-col rounded-2xl bg-[url(/frame-1.jpg)] sm:max-w-[80%] xl:max-w-[60%]">
             <div className="relative flex shrink-0 flex-col items-start justify-center gap-5 border-b border-slate-100 px-5 py-5 sm:flex-row sm:items-end sm:pr-16">
               <Image
                 src="/ikone/financing.svg"
@@ -357,7 +357,7 @@ const SelectService = () => {
           onClick={() => setService(null)}
         >
           <div
-            className="flex h-full w-full max-w-[90%] flex-col rounded-2xl bg-[url(/frame-1.png)] max-[450px]:max-w-[95%] sm:max-w-[80%] xl:max-w-[60%]"
+            className="flex h-full w-full max-w-[90%] flex-col rounded-2xl bg-[url(/frame-1.jpg)] max-[450px]:max-w-[95%] sm:max-w-[80%] xl:max-w-[60%]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative flex shrink-0 flex-col items-start justify-center gap-5 border-b border-slate-100 px-5 py-5 sm:flex-row sm:items-end sm:pr-16">

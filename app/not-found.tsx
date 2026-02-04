@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const NotFound = () => {
   return (
-    <div className="relative z-10 h-screen max-h-screen min-h-screen w-full bg-[url(/frame-1.png)] max-lg:bg-position-[20%] max-md:bg-position-[30%] max-sm:bg-position-[55%] min-[1920px]:bg-cover">
+    <div className="relative z-10 h-screen max-h-screen min-h-screen w-full bg-[url(/frame-1.jpg)] max-lg:bg-position-[20%] max-md:bg-position-[30%] max-sm:bg-position-[55%] min-[1920px]:bg-cover">
       <div className="from-theme1/40 to-theme1/20 absolute inset-0 -z-10 bg-linear-to-r" />
       <div className="absolute top-1/2 z-20 flex w-full -translate-y-1/2 flex-col items-center gap-10 px-6 py-16 sm:px-10 sm:py-20 lg:px-18 lg:py-26">
         <motion.span
