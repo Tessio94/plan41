@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
@@ -9,8 +9,6 @@ import * as motion from "motion/react-client";
 import { cardContainer, cardVariants } from "@/lib/animation";
 
 const Vision = () => {
-  const [animationState, setAnimationState] = useState("paused");
-
   return (
     <section className="bg-background2 relative z-0 px-6 py-26 max-[640px]:pb-50 max-[480px]:pb-95 max-[400px]:pb-130 sm:px-10 lg:px-18 2xl:px-28">
       <motion.h3

@@ -128,7 +128,7 @@ const Header = () => {
             className="text-heading1 font-playfair hover:border-theme3 border-b-none bg-theme2 text-background border-theme1 hover:bg-background hover:text-theme1 flex cursor-pointer items-center gap-1 rounded-2xl rounded-b-none border-2 py-1 pr-9 pl-3 text-xl font-semibold tracking-wider transition-all duration-300 xl:gap-2"
           >
             <CiMobile3 className="text-heading1 ml-[-3px] text-2xl" />
-            <span className="after:bg-theme1 font-mont relative inline-block after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0">
+            <span className="after:bg-theme1 relative inline-block after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0">
               095 72 69 444
             </span>
           </a>
@@ -138,7 +138,7 @@ const Header = () => {
             className="text-heading1 font-playfair bg-theme3 text-background border-theme3 hover:bg-background hover:text-theme3 ml-0 flex cursor-pointer items-center gap-1 rounded-2xl rounded-t-none border-2 px-3 py-1 text-xl font-semibold tracking-wider transition-all duration-300 xl:gap-2"
           >
             <CiMail className="text-heading1 text-2xl" />
-            <span className="after:bg-theme3 font-mont relative inline-block after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0">
+            <span className="after:bg-theme3 relative inline-block after:absolute after:top-full after:right-full after:left-0 after:h-0.5 after:transition-all after:duration-500 after:content-[''] hover:after:right-0">
               info@plan41.hr
             </span>
           </a>

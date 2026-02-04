@@ -25,8 +25,8 @@ html {
   --color-theme4: var(--theme4);
 
   --color-theme1_tr: var(--theme1_tr);
-  --font-playfair: var(--playfair);
-  --font-inter: var(--inter);
+  --font-playfair: var(--playfair-preload), var(--playfair-rest);
+  --font-inter: var(--inter-preload) var(--inter-rest);
 }
 
 @media (prefers-color-scheme: dark) {

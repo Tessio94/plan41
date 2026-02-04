@@ -2,16 +2,11 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const playfair = localFont({
+const playfairPreload = localFont({
   src: [
     {
       path: "fonts/PlayfairDisplay-Regular.ttf",
       weight: "400",
-      style: "normal",
-    },
-    {
-      path: "fonts/PlayfairDisplay-Medium.ttf",
-      weight: "500",
       style: "normal",
     },
     {
@@ -22,6 +17,18 @@ const playfair = localFont({
     {
       path: "fonts/PlayfairDisplay-Bold.ttf",
       weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--playfair-preload",
+  preload: true,
+});
+
+const playfairRest = localFont({
+  src: [
+    {
+      path: "fonts/PlayfairDisplay-Medium.ttf",
+      weight: "500",
       style: "normal",
     },
     {
@@ -40,16 +47,29 @@ const playfair = localFont({
       style: "italic",
     },
   ],
-  variable: "--playfair",
+  variable: "--playfair-rest",
+  preload: false,
 });
 
-const inter = localFont({
+const interPreload = localFont({
   src: [
     {
       path: "fonts/Inter_18pt-Regular.ttf",
       weight: "400",
       style: "normal",
     },
+    {
+      path: "fonts/Inter_18pt-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--inter-preload",
+  preload: true,
+});
+
+const interRest = localFont({
+  src: [
     {
       path: "fonts/Inter_18pt-Medium.ttf",
       weight: "500",
@@ -60,11 +80,7 @@ const inter = localFont({
       weight: "600",
       style: "normal",
     },
-    {
-      path: "fonts/Inter_18pt-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
+
     {
       path: "fonts/Inter_18pt-ExtraBold.ttf",
       weight: "800",
@@ -81,7 +97,8 @@ const inter = localFont({
       style: "italic",
     },
   ],
-  variable: "--inter",
+  variable: "--inter-rest",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -130,7 +147,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${playfair.variable} antialiased`}>
+      <body
+        className={`${interPreload.className} ${interPreload.variable} ${interRest.variable} ${playfairPreload.variable} ${playfairRest.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
