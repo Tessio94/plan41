@@ -38,7 +38,7 @@ const ONama = () => {
                   poduzetničkih projekata.
                 </motion.p>
                 <motion.p
-                  className="font-inter text-2xl sm:text-3xl"
+                  className="font-inter xsm:px-5 px-2.5 text-2xl sm:text-3xl"
                   initial={{ y: 50, opacity: 0 }}
                   whileInView={{
                     y: 0,
@@ -54,7 +54,7 @@ const ONama = () => {
               </div>
               <div className="flex flex-col gap-5">
                 <motion.p
-                  className="font-inter text-2xl sm:text-3xl"
+                  className="font-inter xsm:px-5 px-2.5 text-2xl sm:text-3xl"
                   initial={{ y: 50, opacity: 0 }}
                   whileInView={{
                     y: 0,
@@ -70,7 +70,7 @@ const ONama = () => {
                   razumijevanje i praktična rješenja koja donose rezultate.
                 </motion.p>
                 <motion.p
-                  className="font-inter text-2xl sm:text-3xl"
+                  className="font-inter xsm:px-5 px-2.5 text-2xl sm:text-3xl"
                   initial={{ y: 50, opacity: 0 }}
                   whileInView={{
                     y: 0,
@@ -84,7 +84,7 @@ const ONama = () => {
                 </motion.p>
               </div>
               <motion.p
-                className="font-playfair mt-auto text-4xl font-semibold italic"
+                className="font-playfair xsm:px-5 mt-auto px-2.5 text-4xl font-semibold italic"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
                 viewport={{ once: true, amount: 0.3 }}
